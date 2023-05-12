@@ -27,3 +27,43 @@
 # print(a)
 # a**=2
 # print(a)
+
+#math functions
+#
+# import  math
+# x = 2.9
+# print(round(x))
+# k = -1
+# print(abs(k))
+# print(math.ceil(x))
+# print(math.floor(x))
+
+# If statement
+
+# 1) if statement
+#
+# a = 10
+#
+# if (a%2 == 0) :
+#     print("This is a even number")
+#
+# # 2) if..else statement
+#
+#     if(a<4):
+#         print("testing if block")
+#     else :
+#         print("testing else block")
+#
+# # 3) if..elif..else
+#
+#     c = 100
+#
+#     if(c<10):
+#         print("Testing if block")
+#     elif (c>10 and c<=100):
+#         print("testing else if block")
+#     else:
+#         print("Testing else block")
+
+
+
