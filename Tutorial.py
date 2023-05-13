@@ -119,19 +119,38 @@
 
 ## GUESSING GAME
 
-num = 5;
+# num = 5;
+#
+#
+# ct = 3
+# while ct>0:
+#     a = int(input("Enter Number"))
+#     if(a==num):
+#         print("YOU WON THE GAME")
+#         break
+#     else:
+#         print("TRY AGAIN")
+#         ct-=1
+#
 
 
-ct = 3
-while ct>0:
-    a = int(input("Enter Number"))
-    if(a==num):
-        print("YOU WON THE GAME")
-        break
+#CAR GAME
+
+gamerun = True
+while(gamerun):
+    a = input("> ")
+    if (a == "Help" or a == 'help'):
+        print("Start - To Start The Car\n"
+              "Stop - To Stop The Car\n"
+              "Quit - To Quit The Car\n")
+    elif(a=="Start" or a=="start"):
+        print("Starting The Car, Ready To Go In 3...2..1.")
+    elif(a=="Stop" or a=="stop"):
+        print("Stopping The Car")
+    elif(a=="Quit" or a=="quit"):
+        gamerun = False
     else:
-        print("TRY AGAIN")
-        ct-=1
-
+        print("I Don't Understand That....")
 
 
 

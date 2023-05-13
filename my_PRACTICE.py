@@ -49,3 +49,36 @@
 #     print(i* '*')
 #     i+=1
 
+#cargame
+
+
+game_run = True
+stp = 0
+strt = 0
+while(game_run) :
+    a = input("> ")
+
+    if(a.lower() == "help"):
+        print("Start = Starting The Car\n")
+        print("Stop = Stopping The Car\n")
+        print("Quit = Qutting The Game\n")
+
+    elif (a.lower()=="start" and strt == 0):
+        print("Starting the car")
+        strt+=1
+    elif (a.lower() == "start" and strt >= 1):
+        print("THE CAR IS ALREADY STARTED")
+        strt += 1
+    elif (a.lower()=="stop" and stp==0):
+        print("Car is already stopped")
+        stp+=1
+    elif (a.lower() == "stop" and stp >= 1):
+        if(stp==1):
+            print("THE CAR IS  STOPPED")
+        else:
+            print("THE CAR IS ALREADY STOPPED")
+        stp+= 1
+    elif(a.lower() == "quit"):
+        game_run = False
+    else:
+        print("I don't understand that")
