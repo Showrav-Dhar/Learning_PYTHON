@@ -65,5 +65,74 @@
 #     else:
 #         print("Testing else block")
 
+# Nested if statment
+# num = 5;
+# #Outer if statement
+# if(num >= 0):
+#     # inner if statement
+#     if(num == 0):
+#         print("The number is zero")
+#     # inner else statement
+#     elif (num > 0):
+#         print("the number is positive")
+#
+# #Outer else statement
+# else:
+#     print("The number is negative")
+
+
+# while loop
+# i = 0;
+# while (i<=5):
+#     print(i)
+#     i = i+1
+
+
+#
+# a = int(input())
+# while(a!=0):
+#     print(a)
+#     a = int(input())
+
+
+# Infinite While loop
+# while(1):
+#     print("HELLO")
+
+#while loop with else
+#
+# i = 0
+# while(i<4):
+#     print(i)
+#     i = i + 1
+# else:
+#     print("IN ELSE BLOCK = ",i)
+
+#while loop with break statement
+
+# i = 0
+# while(i<10):
+#     print(i)
+#     if(i==4):
+#         break
+#     i+=1
+
+## GUESSING GAME
+
+num = 5;
+
+
+ct = 3
+while ct>0:
+    a = int(input("Enter Number"))
+    if(a==num):
+        print("YOU WON THE GAME")
+        break
+    else:
+        print("TRY AGAIN")
+        ct-=1
+
+
+
 
 
