@@ -161,15 +161,30 @@
 # for ch in 'Showrav':
 #     print(ch)
 
+# #
+# for i in reversed(range(6)):
+#     for j in range(6):
+#         if(j>=i):
+#             print("* ",end='')
+#         else:
+#             print(" ",end='')
+#     print()
 #
-for i in reversed(range(6)):
-    for j in range(6):
-        if(j>=i):
-            print("* ",end='')
-        else:
-            print(" ",end='')
-    print()
+#
 
+#Print() function in python
+
+a = "bangladeshis"
+b = "Mangoes"
+
+print("{0} loves {1}".format(a, b))
+c = "Apples"
+d = "Americans"
+print("{0} loves {1}".format(c, d))
+
+x = "Apple Products"
+y = "Engineers"
+print(f"{y} loves using {x}")
 
 
 
