@@ -135,22 +135,60 @@
 
 
 #CAR GAME
+#
+# gamerun = True
+# while(gamerun):
+#     a = input("> ")
+#     if (a == "Help" or a == 'help'):
+#         print("Start - To Start The Car\n"
+#               "Stop - To Stop The Car\n"
+#               "Quit - To Quit The Car\n")
+#     elif(a=="Start" or a=="start"):
+#         print("Starting The Car, Ready To Go In 3...2..1.")
+#     elif(a=="Stop" or a=="stop"):
+#         print("Stopping The Car")
+#     elif(a=="Quit" or a=="quit"):
+#         gamerun = False
+#     else:
+#         print("I Don't Understand That....")
 
-gamerun = True
-while(gamerun):
-    a = input("> ")
-    if (a == "Help" or a == 'help'):
-        print("Start - To Start The Car\n"
-              "Stop - To Stop The Car\n"
-              "Quit - To Quit The Car\n")
-    elif(a=="Start" or a=="start"):
-        print("Starting The Car, Ready To Go In 3...2..1.")
-    elif(a=="Stop" or a=="stop"):
-        print("Stopping The Car")
-    elif(a=="Quit" or a=="quit"):
-        gamerun = False
-    else:
-        print("I Don't Understand That....")
+
+# for loop
+#
+# for i in range(10):
+#     print(i)
+#
+# for ch in 'Showrav':
+#     print(ch)
+
+#
+for i in reversed(range(6)):
+    for j in range(6):
+        if(j>=i):
+            print("* ",end='')
+        else:
+            print(" ",end='')
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
