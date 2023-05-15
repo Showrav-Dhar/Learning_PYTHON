@@ -174,17 +174,44 @@
 
 #Print() function in python
 
-a = "bangladeshis"
-b = "Mangoes"
+# FORMATTING
 
-print("{0} loves {1}".format(a, b))
-c = "Apples"
-d = "Americans"
-print("{0} loves {1}".format(c, d))
+# a = "bangladeshis"
+# b = "Mangoes"
+#
+# print("{0} loves {1}".format(a, b))
+# c = "Apples"
+# d = "Americans"
+# print("{0} loves {1}".format(c, d))
+#
+# x = "Apple Products"
+# y = "Engineers"
+# print(f"{y} loves using {x}")
+#
+# a = 10
+# b = 20
+# print(a, " + ", b, " = ", a+b)
+# print(f"{a} + {b} = ", a+b)
+#
+# c = 30
+# d = 50
+# print("you entered %d and %d " % (c, d))
 
-x = "Apple Products"
-y = "Engineers"
-print(f"{y} loves using {x}")
+
+# SEPARATOR
+# print("HELLO", "DIP", "ANTU", "RICHI", sep=',') # HELLO,DIP,ANTU, RICHI
+# print("HELLO", "DIP", "ANTU", "RICHI", sep='\n')
+# HELLO
+# DIP
+# ANTU
+# RICHI
+
+# END
+
+# a = 10
+# b = 20
+# c = 30
+# print(a, b, c, end=' ')
 
 
 
