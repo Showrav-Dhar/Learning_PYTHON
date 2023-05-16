@@ -214,17 +214,101 @@
 # print(a, b, c, end=' ')
 
 
+# LIST
+# numbers = [1,2,5]
+# print(numbers)
+# #
+# my_list = [1,2,"DIP",1.2,1.4]
+# # print(my_list)
+#
+# for i in range(5):
+#     print(my_list[i],end=' ')
+#
+# ara = [10,20,304,50,60]
+#
+# print(ara[1:3]) # output = [20, 304]
+# print(ara[2:]) # output = [304, 50, 60]
+# print(ara[2:4]) # output =[304, 50]
+
+#When we slice lists, the start index is inclusive but the end index is exclusive.
+
+# Add Elements to a Python List
+# append()
+# ara = [10,30,40,50,60]
+#
+# print(ara)
+#
+# ara.append(200)
+# print(ara)
+
+# # extend()
+#
+# list1 = [1,2,3,4]
+# list2 = [10,20,30,40,50]
+# list1.extend(list2)
+# print(list1)
+
+# Change List Items
+# list1 = [1,2,3,4]
+# print(list1)
+# list1[2] = 10
+# print(list1)
+# Remove an Item From a List
+#
+# del method
+# list1 = [1,2,3,4]
+# print(list1)
+# del list1[2]
+# print(list1)
+
+#remove method
+# list1 = ["dip","antu","Richi","Showrav"]
+# print(list1)
+# list1.remove("antu")
+# print(list1)
+# list1.append("MESSI")
+# print(list1)
+#
+# list1 = [1,2,3,4]
+# list1.remove(2)
+# print(list1)
+
+#clear      DELETES THE whole list
+# list1 = [1,2,3,4]
+# print(list1)
+# list1.clear()
+# print(list1)
+
+# # sort
+# list1 = [4,1,3,2]
+# print(list1)
+# list1.sort()
+# print(list1)
+#
+
+# check if a item is present in the list
+# list1 = ["apple","mango","watermelon","Banana"]
+#
+# len_of_list = len(list1)
+# f = False
+# for it in range(len_of_list):
+#     if(list1[it] == "mango"):
+#         print(f"{list1[it]} is present in the list\n")
+#         f = True
+#         break
+#
+# if f==False:
+#     print("Mango is not present in the list")
 
 
-
-
-
-
-
-
-
-
-
+# List Comprehension
+# list1 = [1,2,3,4,5]
+#
+# for it in range(len(list1)):
+#     list1[it] = list1[it]*list1[it]
+#
+#
+# print(list1)
 
 
 

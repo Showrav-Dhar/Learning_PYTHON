@@ -221,6 +221,18 @@
 
 
 
+# find largest number in the list
+list1 = [1,6,2,5,3,8,0,-1]
+mx = -1e10
+
+for it in range(len(list1)):
+    if(list1[it]>=mx):
+        mx = list1[it]
+
+
+print("Largest Item In The List Is = ",mx)
+
+
 
 
 
