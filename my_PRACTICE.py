@@ -220,18 +220,88 @@
 # * * * * * *
 
 
+#
+# # find largest number and smalles in the list
+# list1 = [1,100,2,5,3,8,0,-10]
+# mx = -1e10
+# mn = 1e10
+#
+# for it in range(len(list1)):
+#     if(list1[it]>=mx):
+#         mx = list1[it]
+#     elif(list1[it]<=mn):
+#         mn = list1[it]
+#
+#
+# print("Largest Item In The List Is = ", mx)
+# print("Smallest Item In The List Is = ", mn)
 
-# find largest number in the list
-list1 = [1,6,2,5,3,8,0,-1]
-mx = -1e10
 
-for it in range(len(list1)):
-    if(list1[it]>=mx):
-        mx = list1[it]
+# creating matrix
+
+# rows,cols = (3, 3)
+# matrix = [[0 for i in range(cols)] for j in range(rows)]
+#
+# print("Enter a 3x3 array ")
+# a = 0
+# b = 0
+#
+# for i in range(len(matrix)):
+#     for j in range(len(matrix[i])):
+#         a = int(input())
+#         matrix[i][j] = a
+#
+#
+# print("The Matrix\n")
+#
+# for i in range(len(matrix)):
+#     for j in range(len(matrix[i])):
+#         print(matrix[i][j],end=' ')
+#     print()
+
+#
+# # # list methods
+# l1 = ["antu", "dip", "Messi"]
+# print(l1.index("Messi"))
+# print("antu" in l1)# checking presence of an item
+#
+# #counting occurence of an item
+# l2 = [1,2,3,3,3,3,3,5,1,2,3,4,4]
+# print("3 is present", l2.count(3), "times in the list")
+# l3 = l2.copy()
+# print(l3)
+# l2.append(10000)
+# print(l3)# l3 will not change
+# print(l2)
+#
 
 
-print("Largest Item In The List Is = ",mx)
+# remove duplicate from a list
+# l1 = [1,4,1,3,2,3,3,1,2,3,4,5,5]
+#
+# ct = [0]*(len(l1)+10)
+#
+# for i in range(len(l1)):
+#     ct[l1[i]] += 1
+#
+# l1.clear()
+# for i in range(len(ct)):
+#     if(ct[i]!=0):
+#         l1.append(i)
+#
+#
+# print(l1)
+#
 
+l1 = [2,2,3,1,4,3,2,]
+uniqs = []
+
+for i in l1:
+    if i not in uniqs:
+        uniqs.append(i)
+
+
+print(uniqs)
 
 
 

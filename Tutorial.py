@@ -310,12 +310,68 @@
 #
 # print(list1)
 
+# making a 1d list and taking user input
+# n = 5
+# ara = [0]*n
+# print(len(ara))
+# print("Enter 5 numbers in the list")
+#
+# for i in range(5):
+#     a = int(input())
+#     ara[i] = a
+#
+#
+# print(ara)
+# 2d  LIST
+
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+rows,cols = (5,5)
+arr = [ [0 for i in range(cols)] for j in range(rows)]
+#
+# arr[0][0] = 1
+# arr[2][3] = 10
+
+# for i in range(len(arr)):
+#     for j in range(len(arr[i])):
+#         print(arr[i][j],end=' ')
+#
+#     print()
 
 
 
+# REMOVE DUPLICATES FROM A LIST
+# showrav's solution
+#
+# l1 = [1,4,1,3,2,3,3,1,2,3,4,5,5]
+#
+# ct = [0]*(len(l1)+10)
+#
+# for i in range(len(l1)):
+#     ct[l1[i]] += 1
+#
+# l1.clear()
+# for i in range(len(ct)):
+#     if(ct[i]!=0):
+#         l1.append(i)
+#
+#
+# print(l1)
+
+# mosh solution
+
+nums = [2,2,4,6,3,4,6,1]
+uniqs = []
+
+for i in nums:
+    if i not in uniqs:
+        uniqs.append(i)
 
 
+print(uniqs)
 
-
-
-
+#mosh's solution is better :) in sense of using pythons built in methods
