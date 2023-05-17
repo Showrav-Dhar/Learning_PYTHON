@@ -293,15 +293,25 @@
 # print(l1)
 #
 
-l1 = [2,2,3,1,4,3,2,]
-uniqs = []
+# l1 = [2,2,3,1,4,3,2,]
+# uniqs = []
+#
+# for i in l1:
+#     if i not in uniqs:
+#         uniqs.append(i)
+#
+#
+# print(uniqs)
 
-for i in l1:
-    if i not in uniqs:
-        uniqs.append(i)
 
+# list comprehension
 
-print(uniqs)
+# l1 = [1,2,3,4,5,6]
+# res = [x*x for x in l1]
+# print(res) #[1, 4, 9, 16, 25]
+# ev = [x for x in l1 if x%2 ==0]
+# print(ev) #[2, 4, 6]
+
 
 
 

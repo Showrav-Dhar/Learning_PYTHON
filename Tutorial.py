@@ -363,15 +363,44 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 # print(l1)
 
 # mosh solution
-
-nums = [2,2,4,6,3,4,6,1]
-uniqs = []
-
-for i in nums:
-    if i not in uniqs:
-        uniqs.append(i)
-
-
-print(uniqs)
+#
+# nums = [2,2,4,6,3,4,6,1]
+# uniqs = []
+#
+# for i in nums:
+#     if i not in uniqs:
+#         uniqs.append(i)
+#
+#
+# print(uniqs)
 
 #mosh's solution is better :) in sense of using pythons built in methods
+
+#function to check leap year
+
+# def is_leap(year):
+#     leap = False
+#
+#     if year % 4 == 0 and year%100 !=0:
+#         leap = True
+#     elif year % 400 == 0:
+#         leap = True
+#
+#     return leap
+#
+#
+# print(is_leap(2100))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
