@@ -392,13 +392,42 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 # print(is_leap(2100))
 
 
+# TUPLES
+
+#tuples are immutable
+
+#
+# nums = (1,2,3,4,5,2,2,2)
+# # print(nums.count(2))
+# # print(nums.index((4)))
+#
+# for i in range(len(nums)):
+#     print(nums[i],end=' ')
+
+# unpacking
+
+#
+# coordinate = (1,2,3)
+# #usual stuff
+# # x = coordinate[0]
+# # y = coordinate[1]
+# # z = coordinate[2]
+#
+# #python cool stuff
+# x, y, z = coordinate # main tuple e joto gulo data thakbe , unpack korar shomoi toto gula variable nite hobe
+# #else it will show error, this unpacking method works with list too
+# print(x)
+# print(y)
+# print(z)
+#
+# l1 = [1,2,3]
+# a ,b ,c = l1
+# print(a)
+# print(b)
+# print(c)
 
 
-
-
-
-
-
+#   DICTIONARY
 
 
 

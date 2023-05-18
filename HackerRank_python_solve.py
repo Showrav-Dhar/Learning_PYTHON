@@ -1,3 +1,6 @@
+
+#   BASIC DATA TYPES SECTION ON HackerRANK
+
 #Find the Runner-Up Score!
 
 # if __name__ == '__main__':
@@ -9,4 +12,5 @@
 #     len1 = len(l1)
 #     l1.sort()
 #     print(l1[len1-2])
+
 
