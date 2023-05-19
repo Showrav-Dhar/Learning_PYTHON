@@ -312,6 +312,25 @@
 # ev = [x for x in l1 if x%2 ==0]
 # print(ev) #[2, 4, 6]
 
+# emoji converter
+
+message = input("> ")
+
+emojis = {
+    ":)": "😃",
+    ":(": "😞",
+    ":')": "🥲"
+}
+
+words = message.split(' ')
+
+converted = ""
+
+for word in words:
+    converted +=emojis.get(word, word) + " "
+
+
+print(converted)
 
 
 

@@ -446,16 +446,35 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 # #
 # # for i in p2:
 # #     print(p2[i])
+#
+# #digit to word
+#
+# d_nums = {"0" :"Zero ","1": "One ", "2": "Two ", "3": "Three ", "4": "Four ", "5": "Five ", "6": "Six ", "7": "Seven ", "8": "Eight ","9": "Nine "}
+#
+# s = input("Enter Your Phone Number ")
+#
+# for i in s:
+#     print(d_nums.get(i),end='')
 
-#digit to word
 
-d_nums = {"0" :"Zero ","1": "One ", "2": "Two ", "3": "Three ", "4": "Four ", "5": "Five ", "6": "Six ", "7": "Seven ", "8": "Eight ","9": "Nine "}
-
-s = input("Enter Your Phone Number ")
+#   EMOJI CONVERTER
 
 
-for i in s:
-    print(d_nums.get(i),end='')
+message = input(">")
+words = message.split(' ')
+
+emojis = {
+    ":)" : "😃",
+    ":(" : "😞",
+    ":')": "🥲",
+}
+
+output = ""
+for i in words:
+    output += emojis.get(i,i) + " "
+
+
+print(output)
 
 
 
