@@ -453,6 +453,7 @@ d_nums = {"0" :"Zero ","1": "One ", "2": "Two ", "3": "Three ", "4": "Four ", "5
 
 s = input("Enter Your Phone Number ")
 
+
 for i in s:
     print(d_nums.get(i),end='')
 
