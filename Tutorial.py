@@ -428,6 +428,37 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 
 
 #   DICTIONARY
+# p1 = {"Name = ": "showrav Dhar","Age ": 20,"Address ":"Jamal Khan"}
+# print(p1)
+
+# p1 = {1:10,2:20,3:30,4:40}
+
+# print(p1[3])#p1[key]
+# p1[5] = 50 #adding to dictionary
+# print(p1)
+#
+# del p1[2]# key with 2 will be deleted
+# print(p1)
+
+# p2 = {3:10,4:20,5:30,9:40}
+#
+# print(p2.get(4))
+# #
+# # for i in p2:
+# #     print(p2[i])
+
+#digit to word
+
+d_nums = {"0" :"Zero ","1": "One ", "2": "Two ", "3": "Three ", "4": "Four ", "5": "Five ", "6": "Six ", "7": "Seven ", "8": "Eight ","9": "Nine "}
+
+s = input("Enter Your Phone Number ")
+
+for i in s:
+    print(d_nums.get(i),end='')
+
+
+
+
 
 
 
