@@ -1,4 +1,4 @@
-#arithmatic operation
+# arithmatic operation
 # a = 7
 # b = 4;
 # c = a+b
@@ -11,7 +11,7 @@
 # print(f"Floor division(//) of {a} {b} = ",a//b)
 # print(f"power operator( b ** a) -> {b} to the power {a} = ", b**a)
 
-#Assginment operator
+# Assginment operator
 # a = 7
 # b = 5
 # a+=b
@@ -28,7 +28,7 @@
 # a**=2
 # print(a)
 
-#math functions
+# math functions
 #
 # import  math
 # x = 2.9
@@ -99,7 +99,7 @@
 # while(1):
 #     print("HELLO")
 
-#while loop with else
+# while loop with else
 #
 # i = 0
 # while(i<4):
@@ -108,7 +108,7 @@
 # else:
 #     print("IN ELSE BLOCK = ",i)
 
-#while loop with break statement
+# while loop with break statement
 
 # i = 0
 # while(i<10):
@@ -134,7 +134,7 @@
 #
 
 
-#CAR GAME
+# CAR GAME
 #
 # gamerun = True
 # while(gamerun):
@@ -172,7 +172,7 @@
 #
 #
 
-#Print() function in python
+# Print() function in python
 
 # FORMATTING
 
@@ -230,7 +230,7 @@
 # print(ara[2:]) # output = [304, 50, 60]
 # print(ara[2:4]) # output =[304, 50]
 
-#When we slice lists, the start index is inclusive but the end index is exclusive.
+# When we slice lists, the start index is inclusive but the end index is exclusive.
 
 # Add Elements to a Python List
 # append()
@@ -261,7 +261,7 @@
 # del list1[2]
 # print(list1)
 
-#remove method
+# remove method
 # list1 = ["dip","antu","Richi","Showrav"]
 # print(list1)
 # list1.remove("antu")
@@ -273,7 +273,7 @@
 # list1.remove(2)
 # print(list1)
 
-#clear      DELETES THE whole list
+# clear      DELETES THE whole list
 # list1 = [1,2,3,4]
 # print(list1)
 # list1.clear()
@@ -325,13 +325,15 @@
 # 2d  LIST
 
 matrix = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ]
 
-rows,cols = (5,5)
-arr = [ [0 for i in range(cols)] for j in range(rows)]
+rows, cols = (5, 5)
+arr = [[0 for i in range(cols)] for j in range(rows)]
+
+
 #
 # arr[0][0] = 1
 # arr[2][3] = 10
@@ -341,7 +343,6 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 #         print(arr[i][j],end=' ')
 #
 #     print()
-
 
 
 # REMOVE DUPLICATES FROM A LIST
@@ -374,9 +375,9 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 #
 # print(uniqs)
 
-#mosh's solution is better :) in sense of using pythons built in methods
+# mosh's solution is better :) in sense of using pythons built in methods
 
-#function to check leap year
+# function to check leap year
 
 # def is_leap(year):
 #     leap = False
@@ -394,7 +395,7 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 
 # TUPLES
 
-#tuples are immutable
+# tuples are immutable
 
 #
 # nums = (1,2,3,4,5,2,2,2)
@@ -455,32 +456,70 @@ arr = [ [0 for i in range(cols)] for j in range(rows)]
 #
 # for i in s:
 #     print(d_nums.get(i),end='')
-
-
 #   EMOJI CONVERTER
+# message = input(">")
+# words = message.split(' ')
+#
+# emojis = {
+#     ":)" : "😃",
+#     ":(" : "😞",
+#     ":')": "🥲",
+# }
+#
+# output = ""
+# for i in words:
+#     output += emojis.get(i,i) + " "
+#
+#
+# print(output)
+#
+
+# functions
+
+# def fun():
+#     print("HELLO DIP")
+#
+# for i in range(10):
+#     fun()
+
+# def add (a,b):
+#     return  a+b
+#
+# print(add(10,20))
 
 
-message = input(">")
-words = message.split(' ')
-
-emojis = {
-    ":)" : "😃",
-    ":(" : "😞",
-    ":')": "🥲",
-}
-
-output = ""
-for i in words:
-    output += emojis.get(i,i) + " "
+# def greet(fname,lname):
+#
+#     print(f"{fname} {lname} Welcome")
+#
+# greet("Showrav","Dhar")
 
 
-print(output)
+# def greet(fname,lname):
+#     print(f"Hello {fname} {lname}")
+#
+#
+# print(greet(lname="dhar",fname="Showrav"))#key word arguments
+# #function e argument er jei name disi , function call korar time e amra defeine kore
+# #dichhi argument er nam gula
 
 
+# reusable function
+
+def emoji_converted(user_message):
+    given_message = user_message
+    words = given_message.split(' ')
+
+    emojis = {":)": "😃", ":(": "😞", ":')": "🥲"}
+    converted = ""
+    for word in words:
+        converted += emojis.get(word, word) + " "
+
+    return converted
 
 
+message = ""
 
-
-
-
-
+while message != "bye":
+    message = input("Type A Message > ")
+    print(emoji_converted(message))

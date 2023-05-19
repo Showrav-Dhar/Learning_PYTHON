@@ -313,24 +313,26 @@
 # print(ev) #[2, 4, 6]
 
 # emoji converter
+#
+# message = input("> ")
+#
+# emojis = {
+#     ":)": "😃",
+#     ":(": "😞",
+#     ":')": "🥲"
+# }
+#
+# words = message.split(' ')
+#
+# converted = ""
+#
+# for word in words:
+#     converted +=emojis.get(word, word) + " "
+#
+#
+# print(converted)
 
-message = input("> ")
 
-emojis = {
-    ":)": "😃",
-    ":(": "😞",
-    ":')": "🥲"
-}
-
-words = message.split(' ')
-
-converted = ""
-
-for word in words:
-    converted +=emojis.get(word, word) + " "
-
-
-print(converted)
 
 
 
