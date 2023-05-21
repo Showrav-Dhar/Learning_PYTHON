@@ -31,7 +31,7 @@
 # else:
 #     print("Name Looks Good")
 
-#Weight Converter
+# Weight Converter
 # import math
 #
 # w = int(input("Enter Your Weight = "))
@@ -49,7 +49,7 @@
 #     print(i* '*')
 #     i+=1
 
-#cargame
+# cargame
 
 #
 # game_run = True
@@ -122,7 +122,7 @@
 # print(f"Total Price Is {total}\n")
 
 
-#nested loops
+# nested loops
 
 # for i in range(1,7):
 #     for j in range(1,i):
@@ -333,15 +333,63 @@
 # print(converted)
 
 
-class bike:
-    def __init__(self,name = ""):
-        self.name = name
+# class bike:
+#     def __init__(self,name = ""):
+#         self.name = name
+#
+#
+# b1 = bike("SPORTS")
+# print(b1.name)
+
+# exercise of practicing working with module
+#
+# import dip_module
+#
+# l1 = [20, 10, 50, 60, 100, 90, 1, -1]
+# ans = dip_module.find_max(l1)
+# print("Largest item in the List = ", ans)
+
+# working with modules
+
+# # TYPE 1
+# import Ecommerce.shipping
+# # importing methods specifically
+
+# Ecommerce.shipping.calculate_shipping()
+# Ecommerce.shipping.calculate_total_prods()
+
+# Type 2
+# importing methods  from a module of a package
+# from  Ecommerce.shipping import calculate_shipping,calculate_total_prods
+
+
+# Type 3
+# importing entire module from a package
+# from Ecommerce import shipping
+# shipping.calculate_shipping()
+# shipping.calculate_total_prods()
 
 
 
 
-b1 = bike("SPORTS")
-print(b1.name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

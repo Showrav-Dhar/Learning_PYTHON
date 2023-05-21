@@ -592,40 +592,73 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #
 # INHERITANCE
 
-class animal:
-    animal_name = ""
+# class animal:
+#     animal_name = ""
+#
+#     def eat(self):
+#         print(f"{self.animal_name} is eating now")
+#
+#     def sleep(self):
+#         print(f"{self.animal_name} is sleeping now")
+#
+#
+# class dog(animal):
+#     def __init__(self,name):
+#         self.animal_name = name
+#
+#     def sounds_Like(self):
+#         print(f"{self.animal_name} sound bark bark !!!!")
+#
+#
+#     def eat(self): #method over_riding
+#         print(f"{self.animal_name} Loves to eat Bones")
+#
+#     #super method
+#
+#     def sleep(self):
+#         super.sleep()
+#         print()
+#
+#
+#
+# d1 = dog("Tommy")
+# print(d1.animal_name)
+# d1.eat()
+# d1.sleep()
+# d1.sounds_Like()
 
-    def eat(self):
-        print(f"{self.animal_name} is eating now")
 
-    def sleep(self):
-        print(f"{self.animal_name} is sleeping now")
+# working with modules
+#
+# import dip_module
+#
+# print(dip_module.add_dip(10,20))
+# print(dip_module.subtract_dip(5,10))
+
+#importing module with renaming
+# import dip_module as dm
+# print(dm.subtract_dip(10,20))
+# print(dm.add_dip(30,20))
+
+# working with packages
+
+#
+# import Ecommerce.shipping
+#
+# Ecommerce.shipping.calculate_shipping()
+
+# from Ecommerce.shipping import calculate_shipping, calculate_total_prods
+
+# to import the entire module
+#
+# from Ecommerce import shipping # called the shipping module from the package Ecommerce
+# #from package import module
+# shipping.calculate_shipping()
+# shipping.calculate_total_prods()
 
 
-class dog(animal):
-    def __init__(self,name):
-        self.animal_name = name
-
-    def sounds_Like(self):
-        print(f"{self.animal_name} sound bark bark !!!!")
 
 
-    def eat(self): #method over_riding
-        print(f"{self.animal_name} Loves to eat Bones")
-
-    #super method
-
-    def sleep(self):
-        super.sleep()
-        print()
-
-
-
-d1 = dog("Tommy")
-print(d1.animal_name)
-d1.eat()
-d1.sleep()
-d1.sounds_Like()
 
 
 
