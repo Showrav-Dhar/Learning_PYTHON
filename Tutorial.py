@@ -651,10 +651,10 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 
 # to import the entire module
 #
-# from Ecommerce import shipping # called the shipping module from the package Ecommerce
-# #from package import module
-# shipping.calculate_shipping()
-# shipping.calculate_total_prods()
+from Ecommerce import shipping # called the shipping module from the package Ecommerce
+#from package import module
+shipping.calculate_shipping()
+shipping.calculate_total_prods()
 
 
 

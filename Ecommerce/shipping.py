@@ -3,4 +3,4 @@ def calculate_shipping():
 
 
 def calculate_total_prods():
-    print("Calculating total number of products")
+    print("Calculating total number of products in cargo")

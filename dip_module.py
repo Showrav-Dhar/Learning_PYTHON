@@ -8,9 +8,9 @@ def subtract_dip(a, b):
 
 
 def find_max(l1):
-    mx = l1[0]
+    the_mx = l1[0]
     for i in range(len(l1)):
-        if (l1[i] > mx):
-            mx = l1[i]
+        if (l1[i] > the_mx):
+            the_mx = l1[i]
 
-    return mx;
+    return the_mx;
