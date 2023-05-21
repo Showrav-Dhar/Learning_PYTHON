@@ -505,21 +505,142 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 
 
 # reusable function
+# def emoji_converted(user_message):
+#     given_message = user_message
+#     words = given_message.split(' ')
+#
+#     emojis = {":)": "😃", ":(": "😞", ":')": "🥲"}
+#     converted = ""
+#     for word in words:
+#         converted += emojis.get(word, word) + " "
+#
+#     return converted
+#
+#
+# message = ""
+#
+# while message != "bye":
+#     message = input("Type A Message > ")
+#     print(emoji_converted(message))
 
-def emoji_converted(user_message):
-    given_message = user_message
-    words = given_message.split(' ')
 
-    emojis = {":)": "😃", ":(": "😞", ":')": "🥲"}
-    converted = ""
-    for word in words:
-        converted += emojis.get(word, word) + " "
+# Python built in exception
+# print(dir(locals()['__builtins__']))
+#
+# try:
+#     age = int(input("Enter Age > "))
+#     income = 20000
+#     risk = income/age
+#     print(age)
+#     print(risk)
+# except ZeroDivisionError :
+#     print("Age cannot be zero")
+# except ValueError:
+#     print("INVALID VALUE")
 
-    return converted
+# PYTHON OOP
+
+# class room:
+#
+#     length = 0.0
+#     bredth = 0.0
+#
+#     def calculate_area(self):
+#         print("Area of the room = ",self.length *self.bredth)
+#
+#
+# bedroom = room()
+# bedroom.length = 10
+# bedroom.bredth = 20
+# bedroom.calculate_area()
+#
+# study_room = room()
+# study_room.bredth = 30
+# study_room.length = 40
+# study_room.calculate_area()
+
+# class Bike:
+# #CONSTRUCTOR
+#     def __init__(self,name = ""):
+#         self.name = name
+#
+#
+#
+# b1 = Bike("Mountain Bike")
+# print(b1.name)
 
 
-message = ""
+# class Person:
+#     def __init__(self,name = "",age = 0):#constructor of the class
+#         self.name = name
+#         self.age = age
+#
+#     def talk(self):# method of a class
+#         print(f"{self.name} is talking")
+#
+#
+#
+# p1 = Person("Showrav Dhar",23)
+# print(p1.name)
+# print(p1.age)
+# p1.talk()
+#
+# p2 = Person("Showmik Dhar",24)
+# print(p2.name)
+# print(p2.age)
+# p2.talk()
+#
+# INHERITANCE
 
-while message != "bye":
-    message = input("Type A Message > ")
-    print(emoji_converted(message))
+class animal:
+    animal_name = ""
+
+    def eat(self):
+        print(f"{self.animal_name} is eating now")
+
+    def sleep(self):
+        print(f"{self.animal_name} is sleeping now")
+
+
+class dog(animal):
+    def __init__(self,name):
+        self.animal_name = name
+
+    def sounds_Like(self):
+        print(f"{self.animal_name} sound bark bark !!!!")
+
+
+    def eat(self): #method over_riding
+        print(f"{self.animal_name} Loves to eat Bones")
+
+    #super method
+
+    def sleep(self):
+        super.sleep()
+        print()
+
+
+
+d1 = dog("Tommy")
+print(d1.animal_name)
+d1.eat()
+d1.sleep()
+d1.sounds_Like()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

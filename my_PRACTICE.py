@@ -333,10 +333,15 @@
 # print(converted)
 
 
+class bike:
+    def __init__(self,name = ""):
+        self.name = name
 
 
 
 
+b1 = bike("SPORTS")
+print(b1.name)
 
 
 
