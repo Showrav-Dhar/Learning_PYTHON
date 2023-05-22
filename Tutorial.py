@@ -333,7 +333,6 @@ matrix = [
 rows, cols = (5, 5)
 arr = [[0 for i in range(cols)] for j in range(rows)]
 
-
 #
 # arr[0][0] = 1
 # arr[2][3] = 10
@@ -635,7 +634,7 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # print(dip_module.add_dip(10,20))
 # print(dip_module.subtract_dip(5,10))
 
-#importing module with renaming
+# importing module with renaming
 # import dip_module as dm
 # print(dm.subtract_dip(10,20))
 # print(dm.add_dip(30,20))
@@ -650,19 +649,71 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # from Ecommerce.shipping import calculate_shipping, calculate_total_prods
 
 # to import the entire module
+# #
+# from Ecommerce import shipping # called the shipping module from the package Ecommerce
+# #from package import module
+# shipping.calculate_shipping()
+# shipping.calculate_total_prods()
+
+
+# generating random values
+# import random
+
+# for i in range(5):
+#     # print(random.random())
+#     print(random.randint(10, 20))#Random values within the range of 10 - 20
+
 #
-from Ecommerce import shipping # called the shipping module from the package Ecommerce
-#from package import module
-shipping.calculate_shipping()
-shipping.calculate_total_prods()
+# l1 = ["antu","dip","Richi","Lamisa"]
+# person = random.choice(l1)#Randomly selects an item from the list
+# print(person)
+#
+# dice game
+#
+# import random
+#
+#
+# class dice:
+#     def roll(self):
+#         first_num = random.randint(1, 6)
+#         second_num = random.randint(1, 6)
+#         return first_num, second_num
+#
+#
+# d1 = dice()
+# print(d1.roll())
+
+# working with directories
 
 
+# absolute path [ /usr/local/bin ]
+# relative path
 
+#
+# from pathlib import Path
+#
+# # path = Path("Ecommerce")  # created an object of path class
+# # print(path.exists())
+#
+# path = Path("Customers")  # created a new directory using class fucntion
+# print(path.mkdir())
 
+#to remove directory
+# print(path.rmdir()) #Customers directory removed
 
+# to find all the py files in a directory
 
+from pathlib import Path
 
+path = Path()
+# print(path.glob("*.py"))
+#iterating through the files
+# for file in path.glob("*py"): #glob method is use to find a type of file all over the diretory
+#     print(file)
+#to show all the files in the directory
 
+for file in path.glob("*"):# all the files in the directory
+    print(file)
 
 
 

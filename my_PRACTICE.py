@@ -364,10 +364,10 @@
 
 
 # Type 3
-# importing entire module from a package
-from Ecommerce import shipping
-shipping.calculate_shipping()
-shipping.calculate_total_prods()
+# # importing entire module from a package
+# from Ecommerce import shipping
+# shipping.calculate_shipping()
+# shipping.calculate_total_prods()
 
 
 
