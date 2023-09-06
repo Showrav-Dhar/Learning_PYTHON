@@ -45,12 +45,45 @@
 #     (hash(tuple(integer_list)))
 
 
+# def swap_case(s):
+#     str = ''
+#     for i in s:
+#         if i.islower():
+#             str += i.upper()
+#         # print(i.upper(),end='')
+#         elif i.isupper():
+#             str += i.lower()
+#         # print(i.lower(),end='')
+#         else:
+#             str += i
+#         # print(i,end='')
+#     return str
+#
+# s = input()
+# ans = swap_case(s)
+# print(ans)
 
 
 
+# occurence of a substring in a string using python
+def count_substring(string, sub_string):
+    count = 0
+    start = 0
+
+    while start<len(string):
+
+        pos = string.find(sub_string,start)
+
+        if pos!=-1:
+            start = pos+1
+            count+=1
+        else:
+            break
 
 
+    return count
 
+print(count_substring("ABCDCDC","CDC"))
 
 
 
