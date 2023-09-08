@@ -40,7 +40,7 @@
 #
 # for line in f:
 #     words = line.split(' ')
-#     # f1.write(' WordCount : '+str(len(words))+' '+line)
+#     f1.write(' WordCount : '+str(len(words))+' '+line)
 #
 # f.close()
 # f1.close()
