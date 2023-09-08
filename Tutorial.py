@@ -790,8 +790,11 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #     for person in infoBook1:
 #         print(infoBook1[person])
 #
-line = "Hello i am showrav"
-words = line.split(' ')
+# line = "Hello i am showrav"
+# words = line.split(' ')
+
+import CodeBasics
+print(CodeBasics.cal_area(10))
 
 
 

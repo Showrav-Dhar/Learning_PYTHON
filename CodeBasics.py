@@ -47,3 +47,30 @@
 
 
 # tutorial - if __name__ == "__main__"
+
+# def cal_area(r):
+#     print(__name__)
+#     return r*r
+
+#
+# print(__name__)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
