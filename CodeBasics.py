@@ -35,15 +35,12 @@
 #     print(s)
 
 # problem create a new file which will contain the texts of dip.txt and the word count in beside each line of that line
-# f = open('/Users/admin/Documents/TestingPython/dip.txt', 'r')
-# f1 = open('/Users/admin/Documents/TestingPython/dip1.txt', 'w')
-#
-# for line in f:
-#     words = line.split(' ')
-#     # f1.write(' WordCount : '+str(len(words))+' '+line)
-#
-# f.close()
-# f1.close()
+f = open('/Users/admin/Documents/TestingPython/dip.txt', 'r')
+f1 = open('/Users/admin/Documents/TestingPython/dip1.txt', 'w')
 
+for line in f:
+    words = line.split(' ')
+    f1.write(' WordCount : '+str(len(words))+' '+line)
 
-# tutorial - if __name__ == "__main__"
+f.close()
+f1.close()
