@@ -766,38 +766,32 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #     f.write('')
 
 #working with json file in python
-infoBook = {}
-
-infoBook['dip'] = {
-    'name' : 'dip',
-    'age'  : '23',
-    'gender': 'male'
-},
-infoBook['antu']= {
-    'name' : 'antu',
-    'age'  : '28',
-    'gender': 'male'
-}
-import json
-# s = json.dumps(infoBook)
-# with open('myfile1213.txt','w') as f:
-#     f.write(s)
-
-with open('myfile1213.txt','r') as f :
-    s = f.read()
-    infoBook1 = json.loads(s)
-
-    for person in infoBook1:
-        print(infoBook1[person])
-
-
-
-
-
-
-
-
-
+# infoBook = {}
+#
+# infoBook['dip'] = {
+#     'name' : 'dip',
+#     'age'  : '23',
+#     'gender': 'male'
+# },
+# infoBook['antu']= {
+#     'name' : 'antu',
+#     'age'  : '28',
+#     'gender': 'male'
+# }
+# import json
+# # s = json.dumps(infoBook)
+# # with open('myfile1213.txt','w') as f:
+# #     f.write(s)
+#
+# with open('myfile1213.txt','r') as f :
+#     s = f.read()
+#     infoBook1 = json.loads(s)
+#
+#     for person in infoBook1:
+#         print(infoBook1[person])
+#
+line = "Hello i am showrav"
+words = line.split(' ')
 
 
 

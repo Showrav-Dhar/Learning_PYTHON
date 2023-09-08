@@ -360,6 +360,7 @@
 
 # Type 2
 # importing methods  from a module of a package
+# here -> Package = Ecommerce,module = shipping,method = calculate_shipping,calculate_total_prods
 # from  Ecommerce.shipping import calculate_shipping,calculate_total_prods
 
 
@@ -370,21 +371,15 @@
 # shipping.calculate_total_prods()
 
 
+#working with files
+f = open('/Users/admin/Documents/TestingPython/dip.txt', 'r')
+f2 = open('/Users/admin/Documents/TestingPython/dip2.txt', 'w')
+for line in f:
+    words = line.split(' ')
+    f2.write('WordCount = ' + str(len(words))+' '+line)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+f.close()
+f2.close()
 
 
 
