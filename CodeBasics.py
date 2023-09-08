@@ -54,23 +54,54 @@
 
 #
 # print(__name__)
+#
+# n,q = map(int,input().split())
+# ara = [0] * (n+1)
+# ara = list(map(int,input().split()))
+#
+# pref = [0] * (n+1)
+# for i in range(1,n+1):
+#     pref[i] = ara[i-1] + pref[i-1]
+#
+#
+# for i in range(q):
+#     l,r = map(int,input().split())
+#     print(pref[r]-pref[l-1])
 
+# n = int(input())
+# ara = list( map(int,input().split()) )
+# pref = [0] * (n+1)
+#
+# for i in range(n):
+#     pref[i] = ara[i] + pref[i-1]
+#
+#
+# q = int(input())
+# for i in range(q):
+#     l,r = map(int,input().split())
+#     if l == 0:
+#         print(pref[r])
+#     else:
+#         print(pref[r] - pref[l-1])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
+# t = int(input())
+# for i in range(t):
+#
+#     n = int(input())
+#     ara = list(map(int,input().split()))
+#
+#     ans = []
+#     ans.append(ara[0])
+#     for i in range(1,n):
+#         if ara[i-1]<=ara[i] :
+#             ans.append(ara[i])
+#         else:
+#             ans.append(ara[i])
+#             ans.append(ara[i])
+#
+#     print(len(ans))
+#     for i in range(len(ans)):
+#         print(ans[i],end=' ')
 
 
