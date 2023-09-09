@@ -333,6 +333,7 @@ matrix = [
 rows, cols = (5, 5)
 arr = [[0 for i in range(cols)] for j in range(rows)]
 
+
 #
 # arr[0][0] = 1
 # arr[2][3] = 10
@@ -698,7 +699,7 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # path = Path("Customers")  # created a new directory using class fucntion
 # print(path.mkdir())
 
-#to remove directory
+# to remove directory
 # print(path.rmdir()) #Customers directory removed
 
 # to find all the py files in a directory
@@ -735,7 +736,7 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # for i in book:
 #     print(book[i])
 
-#Reading a file
+# Reading a file
 # f = open('myfile1213.txt','r')
 # text = f.read()
 # print(text)
@@ -765,7 +766,7 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # with open('myfile1213.txt','w') as f:
 #     f.write('')
 
-#working with json file in python
+# working with json file in python
 # infoBook = {}
 #
 # infoBook['dip'] = {
@@ -792,10 +793,106 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #
 # line = "Hello i am showrav"
 # words = line.split(' ')
+#
+# import CodeBasics
+# print(CodeBasics.cal_area(10))
+#
 
-import CodeBasics
-print(CodeBasics.cal_area(10))
+# Exception Handling
+
+# a = "20"
+# b = 10
+#
+# try:
+#
+#     print(a/b)
+# except Exception as e:
+#     print("Type of Exception = ",e)
+#
+#
+# print("Hello dip ")
 
 
+# classes and object
+
+# class person:
+#     name = "Showrav"
+#     Occupation = "Software Engineer"
+#     networth = "1000k"
+#     def info(self):
+#         print(f"{self.name} is a {self.Occupation}")
+#
+# a = person()
+# a.info()
+
+# Constructor
+# class Person:
+#     def __init__(self,name,occ):
+#         self.name = name
+#         self.occ = occ
+#
+#
+#     def info(self):
+#         print(f"{self.name} is a {self.occ}")
+#
+#
+# p1 = Person("Showrav Dhar","SDE")
+# p1.info()
 
 
+# inheritance
+#
+# class MobileApp:  # base class
+#     def general_use(self):
+#         print("Used in Mobile Phone")
+#
+#
+# class FoodDeliveryApp(MobileApp):
+#     def __init__(self):
+#         print("It is a food delivery app")
+#
+#     def specific_use(self):
+#         self.general_use()
+#         print("It can be used to order food")
+#
+#
+# class RideSharing(MobileApp):
+#     def __init__(self):
+#         print("It is a Ride Sharing app")
+#
+#     def specific_use(self):
+#         self.general_use()
+#         print("It can be used to share Ride")
+#
+#
+# a1 = FoodDeliveryApp()
+# print(isinstance(a1,FoodDeliveryApp))
+# print(isinstance(a1,RideSharing))
+# print(issubclass(RideSharing,MobileApp))
+#
+
+
+# #multiple inheritance
+# class dad:
+#     def D_skills(self):
+#         print("Retierd SDE")
+#
+# class mom:
+#     def M_skills(self):
+#         print("Ex-Product Manager of Bkash")
+#
+#
+# class son(dad,mom):
+#     def designer(self):
+#         print("UI/UX designer At Google")
+#
+#     def skills(self):
+#         dad.D_skills(self)
+#         mom.M_skills(self)
+#
+#
+# p1 = son()
+# p1.D_skills()
+# p1.M_skills()
+# p1.designer()
+# p1.skills()
