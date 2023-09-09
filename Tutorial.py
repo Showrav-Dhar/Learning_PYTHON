@@ -896,3 +896,4 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # p1.M_skills()
 # p1.designer()
 # p1.skills()
+
