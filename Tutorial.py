@@ -896,3 +896,14 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # p1.M_skills()
 # p1.designer()
 # p1.skills()
+
+num = 5
+ct = 0
+bin_num = 0
+
+while num != 0:
+    bin_num += (num % 2) * 10 ** ct
+    num = num // 2
+    ct += 1
+
+print(bin_num)
