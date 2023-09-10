@@ -896,14 +896,30 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # p1.M_skills()
 # p1.designer()
 # p1.skills()
-
-num = 5
-ct = 0
-bin_num = 0
-
-while num != 0:
-    bin_num += (num % 2) * 10 ** ct
-    num = num // 2
-    ct += 1
-
-print(bin_num)
+#
+# import statistics
+#
+# stocks = {
+#     'info': [600, 630, 620],
+#     'ril': [1430, 1490, 1567],
+#     'mtl': [234, 180, 160]
+# }
+#
+# def print_all():
+#     for i in stocks:
+#         a = statistics.mean(stocks[i])
+#         print(f"{i}==>{stocks[i]}==> avg = ",round(a,2))
+#
+# def add():
+#     name = input("Enter stock name  ->")
+#     price = int(input("Enter Stock price    ->"))
+#
+#     if name in stocks:
+#         stocks[name].append(price)
+#     else:
+#         stocks[name] = [price]
+#     print_all()
+#
+# if __name__ == '__main__':
+#     print_all()
+#     add()
