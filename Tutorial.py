@@ -923,5 +923,28 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # if __name__ == '__main__':
 #     print_all()
 #     add()
-l = ['dip','dip','antu']
-print(l.count('dip'))
+
+class netflix():
+    def __init__(self):
+        self.movies = ["Dark Knight", "Iron man", "Batman begins", "Nightcrawler"]
+        self.index = -1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        self.index += 1
+
+        if self.index == len(self.movies):
+            raise StopIteration
+        else:
+            return self.movies[self.index]
+
+
+
+p = netflix()
+it = iter(p)
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
