@@ -371,21 +371,51 @@
 # shipping.calculate_total_prods()
 
 
-#working with files
-f = open('/Users/admin/Documents/TestingPython/dip.txt', 'r')
-f2 = open('/Users/admin/Documents/TestingPython/dip2.txt', 'w')
-for line in f:
-    words = line.split(' ')
-    f2.write('WordCount = ' + str(len(words))+' '+line)
+# #working with files
+# f = open('/Users/admin/Documents/TestingPython/dip.txt', 'r')
+# f2 = open('/Users/admin/Documents/TestingPython/dip2.txt', 'w')
+# for line in f:
+#     words = line.split(' ')
+#     f2.write('WordCount = ' + str(len(words))+' '+line)
+#
+# f.close()
+# f2.close()
 
-f.close()
-f2.close()
-
-
-
-
-
-
+# n,q = map(int,input().split())
+# ara = [0]*(n+1)
+# ara = list(map(int,input().split()))
+#
+# pref = [0]*(n+1)
+#
+# for i in range(1,n+1):
+#     pref[i] = pref[i-1]^ara[i-1]
+#
+# for i in range(q):
+#     l,r = map(int,input().split())
+#     sum = pref[r] ^ pref[l-1]
+#     print(sum)
+#
+#
+# n, a, b = map(int, input().split())
+#
+# a1 = [a]
+# for i in range(n, 0, -1):
+#     if i > a and i != a and i != b:
+#         a1.append(i)
+#     if len(a1) == n // 2:
+#         break
+#
+# a2 = [b]
+# for i in range(1, n + 1):
+#     if i < b and i != b and i not in a1:
+#         a2.append(i)
+#     if len(a2) == n // 2:
+#         break
+#
+# if len(a1) == n // 2 and len(a2) == n // 2:
+#     print(*a1, *a2)
+# else:
+#     print(-1)
 
 
 

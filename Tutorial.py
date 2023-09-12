@@ -924,27 +924,80 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #     print_all()
 #     add()
 
-class netflix():
-    def __init__(self):
-        self.movies = ["Dark Knight", "Iron man", "Batman begins", "Nightcrawler"]
-        self.index = -1
+# class netflix():
+#     def __init__(self):
+#         self.movies = ["Dark Knight", "Iron man", "Batman begins", "Nightcrawler"]
+#         self.index = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.index += 1
+#
+#         if self.index == len(self.movies):
+#             raise StopIteration
+#         else:
+#             return self.movies[self.index]
+#
+#
+#
+# p = netflix()
+# it = iter(p)
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# print(next(it))
 
-    def __iter__(self):
-        return self
+# generator
 
-    def __next__(self):
-        self.index += 1
-
-        if self.index == len(self.movies):
-            raise StopIteration
-        else:
-            return self.movies[self.index]
+# def remote():
+#     yield 'cnn'
+#     yield 'hbo'
 
 
+# iter = remote()
+# print(next(iter))
+# print(next(iter))
 
-p = netflix()
-it = iter(p)
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
+# for c in remote():
+#     print(c)
+
+# def fibo():
+#     a = 0
+#     b = 1
+#
+#     while True:
+#         yield a
+#         a = b
+#         b = a+b
+#
+#
+# for f in fibo():
+#     print(f)
+#     if f > 50:
+#         break
+
+# numbers = [1,2,1,1,5,6,5,7,8,9,8,9,10]
+#
+# # set comp - for set we use {} brackets
+# even_u = {i for i in numbers}
+# print(even_u)
+# # list
+# sq = [i*i for i in numbers]
+# print(sq)
+
+cites = ["chittagong","delhi","monaco"]
+countries = ["Bangladesh","India","Italy"]
+#
+
+# z = zip(cites,countries) #zip fucntion
+# for a in z:
+#     print(a)
+
+
+info = { k:v for (k,v) in zip(countries,cites)}
+print(info)
+
+
+
