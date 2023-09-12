@@ -102,7 +102,7 @@
 # if __name__ == '__main__':
 #     main()
 
-#excecise on files
+# excecise on files
 #
 # word = []
 # with open('myfile1213.txt','r') as f:
@@ -125,3 +125,20 @@
 # for i in occur:
 #     if mx == occur[i]:
 #         print(i)
+
+
+with open('/Users/admin/Documents/stocks1.csv', 'r') as f:
+    with open('/Users/admin/Documents/NEWstocks1.csv', 'w') as f2:
+        f2.write("Name,PE ratio,PB ration\n")
+
+        next(f)
+
+        for line in f:
+            words = line.split(',')  # made list of every word in the line
+            stock = words[0]  # separated them by index
+            price = float(words[1])
+            eps = float(words[2])
+            book = float(words[3])
+            pe = round(price / eps, 2)
+            pb = round(price / book, 2)
+            f2.write(f"{stock},{pe},{pb}\n")
