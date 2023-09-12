@@ -333,7 +333,6 @@ matrix = [
 rows, cols = (5, 5)
 arr = [[0 for i in range(cols)] for j in range(rows)]
 
-
 #
 # arr[0][0] = 1
 # arr[2][3] = 10
@@ -924,27 +923,53 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #     print_all()
 #     add()
 
-class netflix():
-    def __init__(self):
-        self.movies = ["Dark Knight", "Iron man", "Batman begins", "Nightcrawler"]
-        self.index = -1
+# class netflix():
+#     def __init__(self):
+#         self.movies = ["Dark Knight", "Iron man", "Batman begins", "Nightcrawler"]
+#         self.index = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.index += 1
+#
+#         if self.index == len(self.movies):
+#             raise StopIteration
+#         else:
+#             return self.movies[self.index]
+#
+#
+#
+# p = netflix()
+# it = iter(p)
+# print(next(it))
+# print(next(it))
+# print(next(it))
+# print(next(it))
+#
+# test = int(input())
+# for t in range(test):
+#     n, a, b = map(int, input().split())
+#
+#     a1 = [a]
+#     for i in range(n, 0, -1):
+#         if i > a and i != a and i != b:
+#             a1.append(i)
+#         if len(a1) == n // 2:
+#             break
+#
+#     a2 = [b]
+#     for i in range(1, n + 1):
+#         if i < b and i != b and i not in a1:
+#             a2.append(i)
+#         if len(a2) == n // 2:
+#             break
+#
+#
+#     if len(a1) == n//2 and len(a2) == n/2:
+#         print(*a1,*a2)
+#     else:
+#         print(-1)
 
-    def __iter__(self):
-        return self
 
-    def __next__(self):
-        self.index += 1
-
-        if self.index == len(self.movies):
-            raise StopIteration
-        else:
-            return self.movies[self.index]
-
-
-
-p = netflix()
-it = iter(p)
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
