@@ -923,3 +923,5 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # if __name__ == '__main__':
 #     print_all()
 #     add()
+l = ['dip','dip','antu']
+print(l.count('dip'))
