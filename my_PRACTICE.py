@@ -416,6 +416,12 @@
 #     print(*a1, *a2)
 # else:
 #     print(-1)
+#
+#
+# fruit = {'apple','banana','orange'}
+# quant = {10,20,30}
+#
+# item = {k:v for (k,v) in zip(fruit,quant)}
 
 
 

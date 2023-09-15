@@ -986,18 +986,17 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # # list
 # sq = [i*i for i in numbers]
 # print(sq)
-
-cites = ["chittagong","delhi","monaco"]
-countries = ["Bangladesh","India","Italy"]
 #
-
-# z = zip(cites,countries) #zip fucntion
-# for a in z:
-#     print(a)
-
-
-info = { k:v for (k,v) in zip(countries,cites)}
-print(info)
-
-
-
+# cites = ["chittagong","delhi","monaco"]
+# countries = ["Bangladesh","India","Italy"]
+# #
+#
+# # z = zip(cites,countries) #zip fucntion
+# # for a in z:
+# #     print(a)
+#
+#
+# info = { k:v for (k,v) in zip(countries,cites)}
+# print(info)
+#
+#
