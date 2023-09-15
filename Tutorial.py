@@ -986,18 +986,34 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 # # list
 # sq = [i*i for i in numbers]
 # print(sq)
-
-cites = ["chittagong","delhi","monaco"]
-countries = ["Bangladesh","India","Italy"]
+#
+# cites = ["chittagong","delhi","monaco"]
+# countries = ["Bangladesh","India","Italy"]
+# #
+#
+# # z = zip(cites,countries) #zip fucntion
+# # for a in z:
+# #     print(a)
+#
+#
+# info = { k:v for (k,v) in zip(countries,cites)}
+# print(info)
 #
 
-# z = zip(cites,countries) #zip fucntion
-# for a in z:
-#     print(a)
+# Decorators
+def d1(func):
+    def w1(*args, **kwargs):
+        print("Entered into decorator")
+        func(*args, **kwargs)
+        print("Exiting decorator")
+
+    return w1
 
 
-info = { k:v for (k,v) in zip(countries,cites)}
-print(info)
+@d1
+def f1(a):
+    print("coming from f1 = ", a)
 
 
-
+if __name__ == "__main__":
+    f1(10)
