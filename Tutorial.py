@@ -1001,19 +1001,21 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #
 
 # Decorators
-def d1(func):
-    def w1(*args, **kwargs):
-        print("Entered into decorator")
-        func(*args, **kwargs)
-        print("Exiting decorator")
+# def d1(func):
+#     def w1(*args, **kwargs):
+#         print("Entered into decorator")
+#         func(*args, **kwargs)
+#         print("Exiting decorator")
+#
+#     return w1
+#
+#
+# @d1
+# def f1(a):
+#     print("coming from f1 = ", a)
+#
+#
+# if __name__ == "__main__":
+#     f1(10)
 
-    return w1
-
-
-@d1
-def f1(a):
-    print("coming from f1 = ", a)
-
-
-if __name__ == "__main__":
-    f1(10)
+#ok
