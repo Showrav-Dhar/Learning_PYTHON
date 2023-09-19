@@ -423,5 +423,51 @@
 #
 # item = {k:v for (k,v) in zip(fruit,quant)}
 
+# n,q = map(int,input().split())
+# ara = [0]*n
+# ara = list(map(int,input().split()))
+#
+# sum = 0
+# ans = 0
+# finder = {sum: 1}
+#
+# for i in range(n):
+#     sum += ara[i]
+#     if sum-q in finder.keys():
+#         ans += finder[sum-q]
+#
+#     if sum not in finder.keys():
+#         finder[sum] = 1
+#     elif sum in finder.keys():
+#         finder[sum] += 1
+#
+#
+# print(ans)
+
+# Python3 code to demonstrate
+# backward iteration
+# using reversed()
+
+# Initializing number from which
+# iteration begins
+# str = "bangladesh"
+# N = len(str)
+# print(N)
+#
+# # using reversed() to perform the back iteration
+# print ("The reversed numbers are : ", end = "")
+# for i in reversed(range(N)):
+# 	print(str[i])
+#
+
+#*args and **kwargs
+#mostly used in django views
+
+# def myfun(*args,**kwargs):
+# 	print("showing - ",args,kwargs)
+#
+#
+# myfun("abc","dip","antu",lamisa = 123,richi= 2313)
+
 
 
