@@ -333,7 +333,6 @@ matrix = [
 rows, cols = (5, 5)
 arr = [[0 for i in range(cols)] for j in range(rows)]
 
-
 #
 # arr[0][0] = 1
 # arr[2][3] = 10
@@ -1019,70 +1018,95 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #     f1(10)
 # ok
 
-def is_balanced(input_str):
-    stack = []
-    flag = 1
+# def is_balanced(input_str):
+#     stack = []
+#     flag = 1
+#
+#     for char in input_str:
+#         if char == '(':
+#             stack.append(char)
+#         else:
+#             if len(stack) == 0:
+#                 flag = 0
+#                 break
+#             else:
+#                 if stack[-1] == '(' and char == ')':
+#                     stack.pop()
+#                 else:
+#                     flag = 0
+#                     break
+#
+#     if len(stack) == 0 and flag == 1:
+#         return True
+#     else:
+#         return False
+#
+#
+# def solve():
+#     input_str = input()
+#     n = len(input_str)
+#
+#     f1 = input_str[0]
+#     f2 = ''
+#
+#     for i in range(n - 1, -1, -1):
+#         if input_str[i] != f1:
+#             f2 = input_str[i]
+#             break
+#
+#     temp = list(input_str)
+#     for i in range(n):
+#         if input_str[i] == f1:
+#             temp[i] = '('
+#         elif input_str[i] == f2:
+#             temp[i] = ')'
+#
+#     t1 = list(temp)
+#     t2 = list(temp)
+#
+#     for i in range(len(temp)):
+#         if temp[i] != '(' and temp[i] != ')':
+#             t1[i] = '('
+#
+#     for i in range(len(temp)):
+#         if temp[i] != '(' and temp[i] != ')':
+#             t2[i] = ')'
+#
+#     t1_str = ''.join(t1)
+#     t2_str = ''.join(t2)
+#
+#     if is_balanced(t1_str) or is_balanced(t2_str):
+#         print("YES")
+#     else:
+#         print("NO")
+#
+#
+# if __name__ == "__main__":
+#     t = int(input())
+#     for _ in range(t):
+#         solve()
 
-    for char in input_str:
-        if char == '(':
-            stack.append(char)
-        else:
-            if len(stack) == 0:
-                flag = 0
-                break
-            else:
-                if stack[-1] == '(' and char == ')':
-                    stack.pop()
-                else:
-                    flag = 0
-                    break
 
-    if len(stack) == 0 and flag == 1:
-        return True
-    else:
-        return False
+test = int(input())
+for t in range(test):
+    n, m = map(int, input().split())
+    str = input()
+    target = input()
 
+    ct = 0
+    ans = 1e9
 
-def solve():
-    input_str = input()
-    n = len(input_str)
+    for i in range(n - m + 1):
+        for j in range(m):
+            a = ord(str[i + j]) - ord('0')
+            b = ord(target[j]) - ord('0')
+            c = abs(a - b)
+            if c > 5:
+                c = 10 - c
+            ct += c
 
-    f1 = input_str[0]
-    f2 = ''
+        ans = min(ans, ct)
+        # print(ct)
+        ct = 0
 
-    for i in range(n - 1, -1, -1):
-        if input_str[i] != f1:
-            f2 = input_str[i]
-            break
-
-    temp = list(input_str)
-    for i in range(n):
-        if input_str[i] == f1:
-            temp[i] = '('
-        elif input_str[i] == f2:
-            temp[i] = ')'
-
-    t1 = list(temp)
-    t2 = list(temp)
-
-    for i in range(len(temp)):
-        if temp[i] != '(' and temp[i] != ')':
-            t1[i] = '('
-
-    for i in range(len(temp)):
-        if temp[i] != '(' and temp[i] != ')':
-            t2[i] = ')'
-
-    t1_str = ''.join(t1)
-    t2_str = ''.join(t2)
-
-    if is_balanced(t1_str) or is_balanced(t2_str):
-        print("YES")
-    else:
-        print("NO")
-
-
-if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        solve()
+    print(ans)
