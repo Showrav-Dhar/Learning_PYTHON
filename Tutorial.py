@@ -1086,27 +1086,32 @@ arr = [[0 for i in range(cols)] for j in range(rows)]
 #     for _ in range(t):
 #         solve()
 
+#
+# test = int(input())
+# for t in range(test):
+#     n, m = map(int, input().split())
+#     str = input()
+#     target = input()
+#
+#     ct = 0
+#     ans = 1e9
+#
+#     for i in range(n - m + 1):
+#         for j in range(m):
+#             a = ord(str[i + j]) - ord('0')
+#             b = ord(target[j]) - ord('0')
+#             c = abs(a - b)
+#             if c > 5:
+#                 c = 10 - c
+#             ct += c
+#
+#         ans = min(ans, ct)
+#         # print(ct)
+#         ct = 0
+#
+#     print(ans)
 
-test = int(input())
-for t in range(test):
-    n, m = map(int, input().split())
-    str = input()
-    target = input()
 
-    ct = 0
-    ans = 1e9
 
-    for i in range(n - m + 1):
-        for j in range(m):
-            a = ord(str[i + j]) - ord('0')
-            b = ord(target[j]) - ord('0')
-            c = abs(a - b)
-            if c > 5:
-                c = 10 - c
-            ct += c
 
-        ans = min(ans, ct)
-        # print(ct)
-        ct = 0
 
-    print(ans)

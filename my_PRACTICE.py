@@ -469,27 +469,27 @@
 #
 # myfun("abc","dip","antu",lamisa = 123,richi= 2313)
 
+#
+# t = int(input())
+#
+# for ts in range(t):
+#     n, m = map(int, input().split())
+#     st = input()
+#     target = input()
+#
+#     ct = 0
+#     ans = 1e9
+#
+#     for i in range(n - m + 1):
+#         for j in range(m):
+#             a = ord(st[i + j]) - ord('0')
+#             b = ord(target[j]) - ord('0')
+#             c = abs(a - b)
+#             if c > 5:
+#                 c = 10 - c
+#             ct += c
+#         # print(ct)
+#         ans = min(ct, ans)
+#         ct = 0
 
-t = int(input())
-
-for ts in range(t):
-    n, m = map(int, input().split())
-    st = input()
-    target = input()
-
-    ct = 0
-    ans = 1e9
-
-    for i in range(n - m + 1):
-        for j in range(m):
-            a = ord(st[i + j]) - ord('0')
-            b = ord(target[j]) - ord('0')
-            c = abs(a - b)
-            if c > 5:
-                c = 10 - c
-            ct += c
-        # print(ct)
-        ans = min(ct, ans)
-        ct = 0
-
-    print(ans)
+    # print(ans)
