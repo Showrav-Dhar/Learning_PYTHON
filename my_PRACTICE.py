@@ -508,6 +508,7 @@ for tc in range(TC):
     for i in range(1,n+1):
         pref[i] = pref[i]%m
 
+
     cnt = [0] * mx
 
     for i in range(1,n+1):
