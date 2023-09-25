@@ -1127,6 +1127,7 @@ for tc in range(TC):
         pref[i] = pref[i]%m
 
     cnt = [0] * mx
+
     for i in range(1,n+1):
         cnt[pref[i]]+=1
 
