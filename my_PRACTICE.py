@@ -469,27 +469,57 @@
 #
 # myfun("abc","dip","antu",lamisa = 123,richi= 2313)
 
+#
+# t = int(input())
+#
+# for ts in range(t):
+#     n, m = map(int, input().split())
+#     st = input()
+#     target = input()
+#
+#     ct = 0
+#     ans = 1e9
+#
+#     for i in range(n - m + 1):
+#         for j in range(m):
+#             a = ord(st[i + j]) - ord('0')
+#             b = ord(target[j]) - ord('0')
+#             c = abs(a - b)
+#             if c > 5:
+#                 c = 10 - c
+#             ct += c
+#         # print(ct)
+#         ans = min(ct, ans)
+#         ct = 0
 
-t = int(input())
+    # print(ans)
 
-for ts in range(t):
-    n, m = map(int, input().split())
-    st = input()
-    target = input()
+mx = 1000000
+TC = int(input())
+for tc in range(TC):
+    n,m = map(int,input().split())
 
-    ct = 0
-    ans = 1e9
+    ara = list(map(int,input().split()))
 
-    for i in range(n - m + 1):
-        for j in range(m):
-            a = ord(st[i + j]) - ord('0')
-            b = ord(target[j]) - ord('0')
-            c = abs(a - b)
-            if c > 5:
-                c = 10 - c
-            ct += c
-        # print(ct)
-        ans = min(ct, ans)
-        ct = 0
+    pref = [0] * mx
+    for i in range(1,n+1):
+        pref[i] = pref[i-1]+ara[i-1]
 
-    print(ans)
+    for i in range(1,n+1):
+        pref[i] = pref[i]%m
+
+    cnt = [0] * mx
+
+    for i in range(1,n+1):
+        cnt[pref[i]]+=1
+
+    cnt[0] +=1
+
+    ans = 0
+
+    for i in range(1,n+1):
+        cnt[pref[i]]-=1
+        ans+=cnt[pref[i]]
+
+
+    print(f"Case {tc+1}: {ans}")
