@@ -4,7 +4,15 @@ import sys
 
 if __name__ == '__main__':
 
-    sz = 1000000
+    sz = 10000
+
+    test_list = range(sz)
+    print(sys.getsizeof(1)*len(test_list))
+
+    test_arra = np.arange(sz)
+    print(test_arra.size*test_arra.itemsize)
+
+
 
     l1 = range(sz)
     l2 = range(sz)
