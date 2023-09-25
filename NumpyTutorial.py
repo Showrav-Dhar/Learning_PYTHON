@@ -36,5 +36,35 @@ if __name__ == '__main__':
     # Python list took = 15.7470703125
     # numpy array took = 4.986047744750977
 
-    #video 2 - basic array operations
+    # video 2 - basic array operations
+    # a = np.array([5,6,9])
+    # print(a[0])
 
+    # ndim
+    a = np.array([[1, 2], [3, 4], [5, 6]])
+    # print(a.ndim)
+
+    # #itemsize
+    # print(a.itemsize) #outputs 8 . size of one item , it is showing 8 for compile, int size is generally 4bytes
+    #
+    # #data type of current array
+    # print(a.dtype) #output int64
+
+    # if we want to change the data type of the array
+    #
+    a = np.array([[1, 2], [3, 4], [4, 5]], dtype=np.float64)
+    # # print(a.dtype)#now the array becomes of float data type
+    # print(a.itemsize)
+
+    # SIZE
+    # print(a.size)  # total number of elements
+    #
+    # # shape
+    # print(a.shape) # return how many rows and column the array has
+    # print(a)
+
+    a = np.array([[1,2],[3,4],[4,5]],dtype=complex)
+    print(a)
+    # [ [1. + 0.j 2. + 0.j]
+    #   [3. + 0.j 4. + 0.j]
+    #   [4. + 0.j 5. + 0.j] ]
