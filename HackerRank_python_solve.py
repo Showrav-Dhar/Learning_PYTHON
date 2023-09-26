@@ -66,24 +66,41 @@
 
 
 # occurence of a substring in a string using python
-def count_substring(string, sub_string):
-    count = 0
-    start = 0
+# def count_substring(string, sub_string):
+#     count = 0
+#     start = 0
+#
+#     while start<len(string):
+#
+#         pos = string.find(sub_string,start)
+#
+#         if pos!=-1:
+#             start = pos+1
+#             count+=1
+#         else:
+#             break
+#
+#
+#     return count
+#
+# print(count_substring("ABCDCDC","CDC"))
 
-    while start<len(string):
+if __name__ == '__main__':
+    t = int(input())
+    for tc in range(t):
+        n,k,x = map(int,input().split())
 
-        pos = string.find(sub_string,start)
+        sum1 = (k*(k+1))/2
 
-        if pos!=-1:
-            start = pos+1
-            count+=1
+        sum2 = (k*(2*n-k+1))/2
+
+        if x<sum1 or x>sum2:
+            print("NO")
         else:
-            break
+            print("YES")
 
 
-    return count
 
-print(count_substring("ABCDCDC","CDC"))
 
 
 
