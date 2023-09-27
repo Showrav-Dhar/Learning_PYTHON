@@ -103,3 +103,43 @@
 #             for i in range(n - ct, n):
 #                 print(ara[i], end=' ')
 #             print('\n')
+
+# def fact(n):
+#     if n == 1:
+#         return 1
+#
+#     return (n*fact(n-1))
+#
+#
+# if __name__ == '__main__':
+#     t = int(input())
+#     for a in range(t):
+#         x = int(input())
+#         print(fact(x))
+
+
+# factorial using dp
+import sys
+
+sys.setrecursionlimit(10 ** 6 + 5)
+
+dp = [-1] * (10 ** 6 + 123)
+
+
+def fact(n):
+    if n == 1:
+        return 1
+    if dp[n] != -1:
+        return dp[n]
+
+    dp[n] = n * (fact(n - 1)) % 1000000007
+
+    return dp[n]
+
+
+if __name__ == '__main__':
+
+    t = int(input())
+    for x in range(t):
+        a = int(input())
+        print(fact(a))

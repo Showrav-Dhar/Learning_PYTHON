@@ -30,14 +30,14 @@ if __name__ == '__main__':
 
 # video 2 - basic array operations
 
-    a = np.array([[1,2],[3,4],[4,5]])
-    print(a.itemsize)
-    print(a.dtype)
-    print(a.shape)
-    print(a.ndim)
-
-    a = np.array([[1,2],[3,1],[3,1]],dtype=complex)
-    print(a.dtype)
+    # a = np.array([[1,2],[3,4],[4,5]])
+    # print(a.itemsize)
+    # print(a.dtype)
+    # print(a.shape)
+    # print(a.ndim)
+    #
+    # a = np.array([[1,2],[3,1],[3,1]],dtype=complex)
+    # print(a.dtype)
 
 
 
