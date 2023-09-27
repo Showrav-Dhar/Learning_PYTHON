@@ -64,7 +64,6 @@
 # print(ans)
 
 
-
 # occurence of a substring in a string using python
 # def count_substring(string, sub_string):
 #     count = 0
@@ -84,25 +83,23 @@
 #     return count
 #
 # print(count_substring("ABCDCDC","CDC"))
-
-if __name__ == '__main__':
-    t = int(input())
-    for tc in range(t):
-        n,k,x = map(int,input().split())
-
-        sum1 = (k*(k+1))/2
-
-        sum2 = (k*(2*n-k+1))/2
-
-        if x<sum1 or x>sum2:
-            print("NO")
-        else:
-            print("YES")
-
-
-
-
-
-
-
-
+#
+# if __name__ == '__main__':
+#     t = int(input())
+#     for tc in range(t):
+#         n = int(input())
+#         ara = list(map(int, input().split()))
+#         ara.sort()
+#         mx = ara[n - 1]
+#         ct = ara.count(mx)
+#
+#         if ct == n:
+#             print("-1")
+#         else:
+#             print(f"{n - ct} {ct}")
+#             for i in range(0,n - ct):
+#                 print(ara[i], end=' ')
+#             print('\n')
+#             for i in range(n - ct, n):
+#                 print(ara[i], end=' ')
+#             print('\n')
