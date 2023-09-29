@@ -1,7 +1,6 @@
 import numpy as np
-import time
 import sys
-
+import time
 if __name__ == '__main__':
 
     # sz = 10000
@@ -29,15 +28,15 @@ if __name__ == '__main__':
     # print("numpy array took time - (in Ms)", (time.time() - start) * 1000)
 
 # video 2 - basic array operations
-
-    # a = np.array([[1,2],[3,4],[4,5]])
-    # print(a.itemsize)
-    # print(a.dtype)
-    # print(a.shape)
-    # print(a.ndim)
-    #
-    # a = np.array([[1,2],[3,1],[3,1]],dtype=complex)
-    # print(a.dtype)
+    a = np.array([[1,2],[3,4],[5,6]],dtype=np.float64)
+    print(a)
+    print(a.shape)
+    print(a.dtype)
+    print(a.itemsize)
+    print(a.ndim)
+    print(a.size)
+    b = np.array([[1, 2], [3, 10], [100, 6]], dtype=complex)
+    print(b.dtype)
 
 
 

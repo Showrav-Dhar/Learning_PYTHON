@@ -119,27 +119,29 @@
 
 
 # factorial using dp
-import sys
+# import sys
+#
+# sys.setrecursionlimit(10 ** 6 + 5)
+#
+# dp = [-1] * (10 ** 6 + 123)
+#
+#
+# def fact(n):
+#     if n == 1:
+#         return 1
+#     if dp[n] != -1:
+#         return dp[n]
+#
+#     dp[n] = n * (fact(n - 1)) % 1000000007
+#
+#     return dp[n]
+#
+#
+# if __name__ == '__main__':
+#
+#     t = int(input())
+#     for x in range(t):
+#         a = int(input())
+#         print(fact(a))
 
-sys.setrecursionlimit(10 ** 6 + 5)
 
-dp = [-1] * (10 ** 6 + 123)
-
-
-def fact(n):
-    if n == 1:
-        return 1
-    if dp[n] != -1:
-        return dp[n]
-
-    dp[n] = n * (fact(n - 1)) % 1000000007
-
-    return dp[n]
-
-
-if __name__ == '__main__':
-
-    t = int(input())
-    for x in range(t):
-        a = int(input())
-        print(fact(a))

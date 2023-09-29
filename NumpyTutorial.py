@@ -41,7 +41,7 @@ if __name__ == '__main__':
     # print(a[0])
 
     # ndim
-    a = np.array([[1, 2], [3, 4], [5, 6]])
+    # a = np.array([[1, 2], [3, 4], [5, 6]])
     # print(a.ndim)
 
     # #itemsize
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     # if we want to change the data type of the array
     #
-    a = np.array([[1, 2], [3, 4], [4, 5]], dtype=np.float64)
+    # a = np.array([[1, 2], [3, 4], [4, 5]], dtype=np.float64)
     # # print(a.dtype)#now the array becomes of float data type
     # print(a.itemsize)
 
@@ -63,8 +63,40 @@ if __name__ == '__main__':
     # print(a.shape) # return how many rows and column the array has
     # print(a)
 
-    a = np.array([[1,2],[3,4],[4,5]],dtype=complex)
-    print(a)
+    # a = np.array([[1,2],[3,4],[4,5]],dtype=complex)
+    # print(a)
     # [ [1. + 0.j 2. + 0.j]
     #   [3. + 0.j 4. + 0.j]
     #   [4. + 0.j 5. + 0.j] ]
+
+    # if you want to initialize array with placeholder value
+    # a = np.zeros((3, 4))  # in zeros function pass the dimension of your desired matrix
+    # print(a)
+    # b = np.ones((5, 4))  # in ones function pass the dimension of your desired matrix
+    # print(b)
+
+    # arange
+
+    # makes a 1d array of 1 to 14
+    # a = np.arange(1, 15)  # [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14]
+    # print(a)
+    # if you want to make the items 1,3,5..
+    # a = np.arange(1, 20, 2)
+    # print(a)  # [ 1  3  5  7  9 11 13 15 17 19]
+
+    # linspace
+    # a = np.linspace(1,5,10)
+    # print(a)
+    # a = np.linspace(1, 5, 100)
+    # print(a)
+
+    # reshape
+
+    a = np.array([[1, 2], [3, 4], [5, 6]])
+    print("Before operation")
+    print(a)
+    print(f"Shape = {a.shape}")
+    print("After operation")
+    b = a.reshape(2, 3)  # .reshape returns a new array, rather than reshaping in place.
+    print(b)
+    print(f"Shape = {b.shape}")
