@@ -91,12 +91,15 @@ if __name__ == '__main__':
     # print(a)
 
     # reshape
+    #
+    # a = np.array([[1, 2], [3, 4], [5, 6]])
+    # print("Before operation")
+    # print(a)
+    # print(f"Shape = {a.shape}")
+    # print("After operation")
+    # b = a.reshape(2, 3)  # .reshape returns a new array, rather than reshaping in place.
+    # print(b)
+    # print(f"Shape = {b.shape}")
 
-    a = np.array([[1, 2], [3, 4], [5, 6]])
-    print("Before operation")
-    print(a)
-    print(f"Shape = {a.shape}")
-    print("After operation")
-    b = a.reshape(2, 3)  # .reshape returns a new array, rather than reshaping in place.
-    print(b)
-    print(f"Shape = {b.shape}")
+
+
