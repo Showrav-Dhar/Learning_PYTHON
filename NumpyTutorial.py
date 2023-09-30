@@ -101,5 +101,34 @@ if __name__ == '__main__':
     # print(b)
     # print(f"Shape = {b.shape}")
 
+    # ravel ( makes the array one dimensional)
+    # a = np.array([[1, 2], [3, 4], [5, 6]])
+    # print("Before using ravel")
+    # print(a)
+    # print("After using ravel")
+    # b = a.ravel()
+    # print(b)
 
+    # mathematical functions
 
+    # a = np.array([[1, 2, 3, 0, 1], [3, 4, 9, 4, 2], [4, 5, 1, 2, 3], [6, 10, 11, 12, 11]])
+    # print(a.min())
+    # print(a.max())
+    # print(a.sum())
+    # # row wise
+    # print("Row wise operations")
+    # print(a.min(axis=1))  # shows minimum values of each row
+    # print(a.max(axis=1))  # shows max values of each row
+    # print(a.sum(axis=1))  # shows sum of values of each row
+    # # column wise
+    # print("Row wise operations")
+    # print(a.min(axis=0))  # shows minimum values of each column
+    # print(a.max(axis=0))  # shows max values of each column
+    # print(a.sum(axis=0))  # shows sum of values of each column
+    #
+    # # you can not use sqrt function directly with array object -> a, you have to use numpy keyword
+    #
+    # print(np.sqrt(a))  # sqrt of each element in the matrix
+    #
+    # # standard deviation
+    # print(np.std(a))

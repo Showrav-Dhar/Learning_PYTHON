@@ -28,16 +28,27 @@ if __name__ == '__main__':
     # print("numpy array took time - (in Ms)", (time.time() - start) * 1000)
 
 # video 2 - basic array operations
-    a = np.array([[1,2],[3,4],[5,6]],dtype=np.float64)
-    print(a)
-    print(a.shape)
-    print(a.dtype)
-    print(a.itemsize)
-    print(a.ndim)
-    print(a.size)
-    b = np.array([[1, 2], [3, 10], [100, 6]], dtype=complex)
-    print(b.dtype)
+#     a = np.array([[1,2],[3,4],[5,6]],dtype=np.float64)
+#     print(a)
+#     print(a.shape)
+#     print(a.dtype)
+#     print(a.itemsize)
+#     print(a.ndim)
+#     print(a.size)
+#     b = np.array([[1, 2], [3, 10], [100, 6]], dtype=complex)
+#     print(b.dtype)
 
+    # print("HELLO")
+    # a = np.array([[1,2],[3,4],[4,5]])
+    # print("Shape of a = ",a.shape)
+    # print(a)
+    #
+    # b = a.reshape(2,3)
+    # print("Changed shape of a = ",b.shape)
+    # print(b)
+
+    a = np.zeros((4,4))
+    print(a)
 
 
 
