@@ -143,5 +143,3 @@
 #     for x in range(t):
 #         a = int(input())
 #         print(fact(a))
-
-

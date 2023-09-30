@@ -98,10 +98,10 @@
 #         a = int(input())
 #         print(fact(a))
 #
-# a = range(10)
-# for i in (a):
+# # a = range(10)
+# # for i in (a):
 #     print(i)
 
-a = range(5,150,2);
-for i in (a):
-    print(i)
+# a = range(5,150,2);
+# for i in (a):
+#     print(i)

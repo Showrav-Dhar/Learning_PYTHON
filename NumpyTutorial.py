@@ -139,7 +139,7 @@ if __name__ == '__main__':
     # print(np.std(a))
 
     # matrix operations
-
+    #
     # a = np.array([[1,2],[3,4],[5,6],[4,1]])
     # b = np.array([[2,3],[4,5],[6,1],[4,3]])
     # print(a+b)
@@ -147,4 +147,58 @@ if __name__ == '__main__':
     # print(a*b)
     # print(a/b)
     # print(a.dot(b))# dot product
+    #
+    # video 3 slicing/stacking arrays, indexing with boolean arrays
+
+    # slicing in list
+    # li = [1, 3, 4, 4, 1, 3, 4]
+    # print(li[0:4])
+
+    # slicing in 1D array
+    # a = np.array([1, 2, 3, 4, 5, 6, 8])
+    # print(a[0:4])
+
+    # Modify Array Elements Using Slicing
+
+    # a = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    # a[3:] = 40
+    # print(a)  # [ 1  2  3 40 40 40 40 40 40 40] #the array is filled with 40 from index 3
+    # b1 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    # b1[:3] = 31  # [31 31 31  4  5  6  7  8  9 10] #the array is filled with 31 from 0 until index 3
+    # print(b1)
+    #
+    # c1 = np.array([1, 2, 3, 4, 5, 6, 7])
+    # c1[2:4] = 100  # [  1   2 100 100   5   6   7]
+    # print(c1)
+    #
+    # d1 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    # d1[1:6:2] = 20  # From index 1 until 6 jump by 2 and make the item = 20
+    # print(d1)  # [ 1 20  3 20  5 20  7  8  9 10]
+
+    # 2D NumPy Array Slicing
+    # array[row_start:row_stop:row_step, col_start:col_stop:col_step]
+
+    # a1 = np.array([[1,3,5,7],
+    #                [9,11,13,15]])
+    #
+    # print(a1[:2,:2])
+
+    # a1 = np.array([[1,2,3],
+    #                [4,3,2],
+    #                [6,5,4]])
+
+    # slice the array to get the first two rows and columns
+    # print(a1[:2,:2])
+    # a1[:2, :2] - slices a1 array that starts at the first row and first column (default values),
+    # and ends at the second row and second column (exclusive)
+    # [[1 2]
+     # [4 3]]
+    # slice the array to get the last two rows and columns
+    # print(a1[1:3,1:3])
+    # [[3 2]
+     # [5 4]]
+
+
+
+
 
