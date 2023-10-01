@@ -260,6 +260,7 @@ if __name__ == '__main__':
     # for i in range(2):
     #     print(res1[i])
 
+    # BOOLEAN array
     # a = np.arange(12).reshape(3, 4)
     # print(a)
     # [ [0  1  2  3]
@@ -275,6 +276,24 @@ if __name__ == '__main__':
     # print(c)  # [ 6  7  8  9 10 11]
     # a[b] = 123
     # print(a)
-# [[  0   1   2   3]
-#  [  4   5 123 123]
-#  [123 123 123 123]]
+    # [[  0   1   2   3]
+    #  [  4   5 123 123]
+    #  [123 123 123 123]]
+
+    # iterating two arrays at the same time
+    # there dimension should be same or one of them dimension is one
+
+    # a = np.array([[1, 2, 3],
+    #               [3, 4, 1]])
+    # b = np.array([[10, 30,50],
+    #               [40, 50,89]])
+    #
+    # for x, y in np.nditer([a, b]):
+    #     print(x, y)
+
+# 1 10
+# 2 30
+# 3 50
+# 3 40
+# 4 50
+# 1 89
