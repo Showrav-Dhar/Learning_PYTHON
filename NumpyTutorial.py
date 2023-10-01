@@ -192,13 +192,89 @@ if __name__ == '__main__':
     # a1[:2, :2] - slices a1 array that starts at the first row and first column (default values),
     # and ends at the second row and second column (exclusive)
     # [[1 2]
-     # [4 3]]
+    # [4 3]]
     # slice the array to get the last two rows and columns
     # print(a1[1:3,1:3])
     # [[3 2]
-     # [5 4]]
+    #  [5 4]]
 
+    # iterate through arrays
 
+    # a1 = np.array([[1, 2, 3],
+    #                [4,3,2],
+    #                [6,5,4]])
 
+    # for row
+    # for row in a1:
+    #     print(row)
 
+    # printing each cell using ravel
+    # for c in a1.ravel():
+    #     print(c)
 
+    # printing each cell using flat
+    # for c in a1.flat:
+    #     print(c)
+
+    # stacking two arrays
+
+    # a = np.arange(6).reshape(3, 2)
+    # b = np.arange(6, 12).reshape(3, 2)
+    #
+    # c = np.vstack((a, b))  # vertically stacking
+    # print(c)
+    # [ [0  1]
+    #   [2  3]
+    #   [4  5]
+    #   [6  7]
+    #   [8  9]
+    #   [10 11] ]
+    # d = np.hstack((a, b))  # horizontal stacking
+    # print(d)
+
+    #   MATRIX SPLITTING VERTICAL AND HORIZONTAL
+    # a = np.arange(30).reshape(2, 15)
+    # print(a)
+    # # [[0  1  2  3  4  5  6  7  8  9 10 11 12 13 14]
+    # # [15 16 17 18 19 20 21 22 23 24 25 26 27 28 29]]
+    # # slice this big array into 3 diff arrays
+    # print("After slicing")
+    # res = np.hsplit(a, 3)   # HORIZONTAL SPLIT
+    # print(res[0])
+    # print('\n')
+    # # [[ 0  1  2  3  4]
+    # # [15 16 17 18 19]]
+    # print(res[1])
+    # print('\n')
+    # # [[5  6  7  8  9]
+    # #  [20 21 22 23 24]]
+    #
+    # print(res[2])
+    # print('\n')
+    # # [[10 11 12 13 14]
+    # #  [25 26 27 28 29]]
+    # # for i in range(3):
+    # #     print(res[i])
+    #
+    # res1 = np.vsplit(a, 2)  # VERTICAL SPLIT
+    # for i in range(2):
+    #     print(res1[i])
+
+    # a = np.arange(12).reshape(3, 4)
+    # print(a)
+    # [ [0  1  2  3]
+    #   [4  5  6  7]
+    #   [8  9  10 11] ]
+
+    # b = a > 5  # stores true/falls value in the cells where the items in the cells are bigger than 5
+    # print(b)
+    # [[False False False False]
+    #  [False False  True  True]
+    #  [True  True  True  True] ]
+    # c = a[b]  # returns the items that are bigger than 5
+    # print(c)  # [ 6  7  8  9 10 11]
+    # a[b] = 123
+    # print(a)
+# [[  0   1   2   3]
+#  [  4   5 123 123]
+#  [123 123 123 123]]

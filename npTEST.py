@@ -49,10 +49,33 @@ if __name__ == '__main__':
 
     # a = np.zeros((4,4))
     # print(a)
-    a = np.array([[9, 4], [25, 36], [49, 64]])
-    print(np.sqrt(a))
-    print(np.std(a))
-    print(a.sum(axis=0))  # axis = 0 (column wise)
-    print(a.sum(axis=1))  # axis = 0 (row wise)
-    b = a.sum(axis=0)
-    print(b)
+    # a = np.array([[9, 4], [25, 36], [49, 64]])
+    # print(np.sqrt(a))
+    # print(np.std(a))
+    # print(a.sum(axis=0))  # axis = 0 (column wise)
+    # print(a.sum(axis=1))  # axis = 0 (row wise)
+    # b = a.sum(axis=0)
+    # print(b)
+
+    # a = np.array([[1, 2],
+    #               [3, 4]])
+    # b = np.array([[5, 6],
+    #               [6, 4]])
+    #
+    # c = np.vstack((a, b))
+    # d = np.hstack((a, b))
+    # print(c)
+    # print(d)
+
+    a = np.arange(30).reshape(2, 15)
+
+    # res = np.hsplit(a, 5)
+    # for i in range(5):
+    #     print("Matrix ", i + 1)
+    #     print(res[i])
+    #     print('\n')
+
+    res1 = np.vsplit(a,2)
+    for i in range(2):
+        print(res1[i])
+        print('\n')
