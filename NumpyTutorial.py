@@ -194,9 +194,9 @@ if __name__ == '__main__':
     # [[1 2]
      # [4 3]]
     # slice the array to get the last two rows and columns
-    # print(a1[1:3,1:3])
-    # [[3 2]
-     # [5 4]]
+    print(a1[1:3,1:3])
+    [[3 2]
+     [5 4]]
 
 
 
