@@ -67,16 +67,20 @@ if __name__ == '__main__':
     # print(c)
     # print(d)
 
-    a = np.arange(30).reshape(2, 15)
+    # a = np.arange(30).reshape(2, 15)
 
     # res = np.hsplit(a, 5)
     # for i in range(5):
     #     print("Matrix ", i + 1)
     #     print(res[i])
     #     print('\n')
+    #
+    # res1 = np.vsplit(a,2)
+    # for i in range(2):
+    #     print(res1[i])
+    #     print('\n')
 
-    res1 = np.vsplit(a,2)
-    for i in range(2):
-        print(res1[i])
-        print('\n')
+
+
+
 

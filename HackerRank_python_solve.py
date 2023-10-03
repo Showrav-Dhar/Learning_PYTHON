@@ -1,5 +1,5 @@
 #   BASIC DATA TYPES SECTION ON HackerRANK
-
+import numpy
 # Find the Runner-Up Score!
 
 # if __name__ == '__main__':
@@ -143,3 +143,55 @@
 #     for x in range(t):
 #         a = int(input())
 #         print(fact(a))
+
+#
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     a = list(map(int, input().split()))
+#     mat = np.array(a)
+#     # mat.shape = (3,3)
+#     # print(mat)
+#     print(numpy.reshape(mat, (3, 3)))
+
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     n, m = map(int, input().split())
+#     li = []
+#
+#     for i in range(n):
+#         l1 = list(map(int, input().split()))
+#         li.append(l1)
+#
+#     a = np.array(li)
+#     a.shape = (n, m)
+#     b = np.transpose(a)
+#     print(b)
+#     print(b.flatten('F'))
+
+#
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     n, m, p = map(int, input().split())
+#     li1 = []
+#     for i in range(n):
+#         l1 = list(map(int, input().split()))
+#         li1.append(l1)
+#
+#     li2 = []
+#     for i in range(m):
+#         l2 = list(map(int, input().split()))
+#         li2.append(l2)
+#
+#     a = np.array(li1)
+#     b = np.array(li2)
+#     li1.clear()
+#     li2.clear()
+#     a.shape = (n, p)
+#     b.shape = (m, p)
+#
+#     print(np.concatenate((a, b), axis=0))
+
+
