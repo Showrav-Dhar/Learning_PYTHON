@@ -1,5 +1,5 @@
 #   BASIC DATA TYPES SECTION ON HackerRANK
-
+import numpy
 # Find the Runner-Up Score!
 
 # if __name__ == '__main__':
@@ -143,3 +143,15 @@
 #     for x in range(t):
 #         a = int(input())
 #         print(fact(a))
+
+#
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     a = list(map(int, input().split()))
+#     mat = np.array(a)
+#     # mat.shape = (3,3)
+#     # print(mat)
+#     print(numpy.reshape(mat, (3, 3)))
+
+
