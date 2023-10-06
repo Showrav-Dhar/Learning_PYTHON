@@ -227,3 +227,4 @@ if __name__ == '__main__':
     print(np.floor_divide(a1, a2))
     print(np.mod(a1, a2))
     print(np.power(a1, a2))
+
