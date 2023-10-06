@@ -201,29 +201,36 @@ import numpy
 #     print(np.zeros(l1, dtype=int))
 #     print(np.ones(l1, dtype=int))
 
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     n, m = map(int, input().split())
+#     l1 = []
+#     for i in range(n):
+#             l = list(map(int, input().split()))
+#             l1.append(l)
+#
+#     a1 = np.array(l1)
+#     a1.shape = (n, m)
+#
+#     l2 = []
+#     for i in range(n):
+#             l = list(map(int, input().split()))
+#             l2.append(l)
+#
+#     a2 = np.array(l2)
+#     a2.shape = (n, m)
+#
+#     print(np.add(a1, a2))
+#     print(np.subtract(a1, a2))
+#     print(np.multiply(a1, a2))
+#     print(np.floor_divide(a1, a2))
+#     print(np.mod(a1, a2))
+#     print(np.power(a1, a2))
+
 import numpy as np
+np.set_printoptions(legacy='1.13')
 
-if __name__ == '__main__':
-    n, m = map(int, input().split())
-    l1 = []
-    for i in range(n):
-            l = list(map(int, input().split()))
-            l1.append(l)
 
-    a1 = np.array(l1)
-    a1.shape = (n, m)
-
-    l2 = []
-    for i in range(n):
-            l = list(map(int, input().split()))
-            l2.append(l)
-
-    a2 = np.array(l2)
-    a2.shape = (n, m)
-
-    print(np.add(a1, a2))
-    print(np.subtract(a1, a2))
-    print(np.multiply(a1, a2))
-    print(np.floor_divide(a1, a2))
-    print(np.mod(a1, a2))
-    print(np.power(a1, a2))
+n, m = map(int, input().split())
+print(np.eye(n, m, k=0))

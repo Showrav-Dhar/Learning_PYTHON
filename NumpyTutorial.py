@@ -291,9 +291,31 @@ if __name__ == '__main__':
     # for x, y in np.nditer([a, b]):
     #     print(x, y)
 
-# 1 10
-# 2 30
-# 3 50
-# 3 40
-# 4 50
-# 1 89
+    # 1 10
+    # 2 30
+    # 3 50
+    # 3 40
+    # 4 50
+    # 1 89
+
+    # Identity matrix  - N x N matrix An identity array is a square matrix with all the main diagonal elements as 1 and
+    # the rest as 0 . The default type of elements is float.
+
+    # print(np.identity(4))
+    # [ [1. 0. 0. 0.]
+    #   [0. 1. 0. 0.]
+    #   [0. 0. 1. 0.]
+    #   [0. 0. 0. 1.] ]
+
+    # eye tool - same as identity matrix but here the matrix don't have to be NxN , it can be NxM
+    # k = 0 ( main diagonal)
+    # k = positive value ( upper diagonal )
+    # k = Negative value( lower diagonal )
+
+#     n = 4
+#     m = 5
+#     print(np.eye(n, m, k=0))
+# [[1. 0. 0. 0. 0.]
+#  [0. 1. 0. 0. 0.]
+#  [0. 0. 1. 0. 0.]
+#  [0. 0. 0. 1. 0.]]
