@@ -336,3 +336,4 @@ if __name__ == '__main__':
 #     ara = np.array(l1)
 #
 #     print(round(np.linalg.det(ara),2)) #calculating determinant
+

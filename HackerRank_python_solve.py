@@ -1,5 +1,7 @@
 #   BASIC DATA TYPES SECTION ON HackerRANK
-import numpy
+# import numpy
+
+
 # Find the Runner-Up Score!
 
 # if __name__ == '__main__':
@@ -277,7 +279,57 @@ import numpy
 #     print(round( np.std(ara,axis=None) , 11 ))
 
 
+# import numpy as np
+# if __name__ == '__main__':
+#     n,m = map(int,input().split())
+#     li = []
+#     for i in range(n):
+#         l1 = list(map(int,input().split()))
+#         li.append(l1)
+#
+#     a = np.array(li)
+#
+#     print(np.prod(np.sum(a,axis=0)))
+#
+# import heapq
+#
+# def all_possible_pair(array):
+#   """
+#   Generates all possible pairs from an array in O(n log n) time.
+#
+#   Args:
+#     array: A list of elements.
+#
+#   Returns:
+#     A list of all possible pairs from the array.
+#   """
+#
+#   heapq.heapify(array)
+#   result = []
+#   while len(array) > 1:
+#     smallest = heapq.heappop(array)
+#     largest = heapq.heappop(array)
+#     result.append((smallest, largest))
+#     heapq.heappush(array, smallest)
+#   return result
+#
+# array = [1, 2, 3, 4, 5]
+# print(all_possible_pair(array))
 
+if __name__ == '__main__':
+    a = int(input())
+    li = list(map(int, input().split()))
+    dic = {}
+    for i in range(a):
+        dic[li[i]] = dic.get(li[i], 0) + 1
 
+    li2 = []
+    for i in range(a-1, -1, -1):
+        x = li[i]
+        if dic[x] != -1:
+            li2.append(x)
+            dic[x] = -1
 
-
+    print(len(dic))
+    li2.reverse()
+    print(*li2)
