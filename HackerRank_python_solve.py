@@ -228,9 +228,56 @@ import numpy
 #     print(np.mod(a1, a2))
 #     print(np.power(a1, a2))
 
-import numpy as np
-np.set_printoptions(legacy='1.13')
+# import numpy as np
+# np.set_printoptions(legacy='1.13')
+#
+#
+# n, m = map(int, input().split())
+# print(np.eye(n, m, k=0))
+
+# import numpy as np
+# np.set_printoptions(legacy='1.13')
+#
+# if __name__ == '__main__':
+#
+#     l1 = list(map(float,input().split()))
+#     a = np.array(l1)
+#     print(np.floor(a))
+#     print(np.ceil(a))
+#     print(np.rint(a))
+#
+
+# working with linear algebra functions
+
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     n = int(input())
+#     l1 = []
+#     for i in range(n):
+#         l = list(map(float, input().split()))
+#         l1.append(l)
+#
+#     ara = np.array(l1)
+#
+#     print(round(np.linalg.det(ara),2))
+#
+# import numpy as np
+# if __name__ == '__main__':
+#     n,m = map(int,input().split())
+#     li = []
+#     for i in range (n):
+#         l1 = list(map(float,input().split()))
+#         li.append(l1)
+#
+#     ara = np.array(li)
+#
+#     print(np.mean(ara,axis=1))
+#     print(np.var(ara,axis=0))
+#     print(round( np.std(ara,axis=None) , 11 ))
 
 
-n, m = map(int, input().split())
-print(np.eye(n, m, k=0))
+
+
+
+

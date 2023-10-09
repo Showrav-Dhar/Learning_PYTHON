@@ -319,3 +319,20 @@ if __name__ == '__main__':
 #  [0. 1. 0. 0. 0.]
 #  [0. 0. 1. 0. 0.]
 #  [0. 0. 0. 1. 0.]]
+
+
+# working with linear algebra functions
+
+
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     n = int(input())
+#     l1 = []
+#     for i in range(n):
+#         l = list(map(float, input().split()))
+#         l1.append(l)
+#
+#     ara = np.array(l1)
+#
+#     print(round(np.linalg.det(ara),2)) #calculating determinant
