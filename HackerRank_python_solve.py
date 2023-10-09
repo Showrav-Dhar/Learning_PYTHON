@@ -277,7 +277,17 @@ import numpy
 #     print(round( np.std(ara,axis=None) , 11 ))
 
 
-
+# import numpy as np
+# if __name__ == '__main__':
+#     n,m = map(int,input().split())
+#     li = []
+#     for i in range(n):
+#         l1 = list(map(int,input().split()))
+#         li.append(l1)
+#
+#     a = np.array(li)
+#
+#     print(np.prod(np.sum(a,axis=0)))
 
 
 
