@@ -316,20 +316,54 @@
 # array = [1, 2, 3, 4, 5]
 # print(all_possible_pair(array))
 
-if __name__ == '__main__':
-    a = int(input())
-    li = list(map(int, input().split()))
-    dic = {}
-    for i in range(a):
-        dic[li[i]] = dic.get(li[i], 0) + 1
+# if __name__ == '__main__':
+#     a = int(input())
+#     li = list(map(int, input().split()))
+#     dic = {}
+#     for i in range(a):
+#         dic[li[i]] = dic.get(li[i], 0) + 1
+#
+#     li2 = []
+#     for i in range(a-1, -1, -1):
+#         x = li[i]
+#         if dic[x] != -1:
+#             li2.append(x)
+#             dic[x] = -1
+#
+#     print(len(dic))
+#     li2.reverse()
+#     print(*li2)
 
-    li2 = []
-    for i in range(a-1, -1, -1):
-        x = li[i]
-        if dic[x] != -1:
-            li2.append(x)
-            dic[x] = -1
 
-    print(len(dic))
-    li2.reverse()
-    print(*li2)
+n, k = map(int, input().split())
+vec = list(map(int, input().split()))
+ara = {}
+for i in range(n):
+    a = vec[i]
+    vec.append(a)
+    if a in ara:
+        ara[a] += 1
+    else:
+        ara[a] = 1
+
+vec.sort()
+f = set()
+for i in range(n):
+    x = vec[i]
+    ct = 0
+    for key, value in ara.items():
+        if key <= x:
+            ct += value
+    f.add((x, ct))
+
+ans = -1
+for x, ct in f:
+    if ct == k:
+        ans = x
+        break
+
+print(ans)
+
+
+
+
