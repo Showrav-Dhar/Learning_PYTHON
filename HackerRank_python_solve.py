@@ -333,3 +333,4 @@ if __name__ == '__main__':
     print(len(dic))
     li2.reverse()
     print(*li2)
+
