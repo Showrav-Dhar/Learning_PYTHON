@@ -334,35 +334,35 @@
 #     li2.reverse()
 #     print(*li2)
 
-
-n, k = map(int, input().split())
-vec = list(map(int, input().split()))
-ara = {}
-for i in range(n):
-    a = vec[i]
-    vec.append(a)
-    if a in ara:
-        ara[a] += 1
-    else:
-        ara[a] = 1
-
-vec.sort()
-f = set()
-for i in range(n):
-    x = vec[i]
-    ct = 0
-    for key, value in ara.items():
-        if key <= x:
-            ct += value
-    f.add((x, ct))
-
-ans = -1
-for x, ct in f:
-    if ct == k:
-        ans = x
-        break
-
-print(ans)
+#
+# n, k = map(int, input().split())
+# vec = list(map(int, input().split()))
+# ara = {}
+# for i in range(n):
+#     a = vec[i]
+#     vec.append(a)
+#     if a in ara:
+#         ara[a] += 1
+#     else:
+#         ara[a] = 1
+#
+# vec.sort()
+# f = set()
+# for i in range(n):
+#     x = vec[i]
+#     ct = 0
+#     for key, value in ara.items():
+#         if key <= x:
+#             ct += value
+#     f.add((x, ct))
+#
+# ans = -1
+# for x, ct in f:
+#     if ct == k:
+#         ans = x
+#         break
+#
+# print(ans)
 
 
 
