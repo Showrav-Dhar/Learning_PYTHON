@@ -34,3 +34,50 @@
 #
 #     sz = len(li)
 # print(sz)
+
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     st = input()
+#     ans = 1
+#     temp = 1
+#     for i in range(1, n):
+#         if st[i] == st[i - 1]:
+#             temp = temp + 1
+#         else:
+#             ans = max(ans, temp)
+#             temp = 1
+#
+#     ans = max(ans, temp)
+#
+#     print(ans + 1)
+
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    st = input()
+    Lpos = -1
+    Rpos = -1
+    for i in range(n - 1, -1,-1):
+        if st[i] == 'L':
+            Lpos = i + 1
+            break
+
+    for i in range(n):
+        if st[i] == 'R':
+            Rpos = i + 1
+            break
+
+    if Lpos == -1 or Rpos == -1:
+        print(-1)
+    elif Lpos > Rpos:
+        print(0)
+    else:
+        if Lpos < Rpos:
+            Lpos = Lpos - 1
+            if st[Lpos] == 'R':
+                print(Lpos + 1)
+            else:
+                print(-1)
+        else:
+            print(-1)
