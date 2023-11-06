@@ -80,22 +80,49 @@
 #     print(res1[i])
 #     print('\n')
 
+# if __name__ == '__main__':
+#     a = int(input())
+#     li = list(map(int,input().split()))
+#     dic = {}
+#
+#     for i in range(a):
+#         dic[li[i]] = dic.get(li[i],0)+1
+#
+#     li2 = []
+#     for i in range(a-1,-1,-1):
+#         x = li[i]
+#         if dic[x]!=-1:
+#             li2.append(x)
+#             dic[x]=-1
+#
+#     print(len(dic))
+#     li2.reverse()
+#     print(*li2)
+
+import collections
+
 if __name__ == '__main__':
-    a = int(input())
-    li = list(map(int,input().split()))
-    dic = {}
+    n, k = map(int, input().split())
+    ara = list(map(int, input().split()))
 
-    for i in range(a):
-        dic[li[i]] = dic.get(li[i],0)+1
+    dq = collections.deque()
+    freq = collections.defaultdict()
 
-    li2 = []
-    for i in range(a-1,-1,-1):
-        x = li[i]
-        if dic[x]!=-1:
-            li2.append(x)
-            dic[x]=-1
+    for a in ara:
+        if len(dq) == 0:
+            dq.appendleft(a)
+            freq[a] = freq.get(a, 0) + 1
+        else:
+            if a not in freq:
+                if len(dq) >= k:
+                    b = dq.pop()
+                    del freq[b]
 
-    print(len(dic))
-    li2.reverse()
-    print(*li2)
+                    dq.appendleft(a)
+                    freq[a] = freq.get(a, 0) + 1
+                else:
+                    dq.appendleft(a)
+                    freq[a] = freq.get(a, 0) + 1
 
+    print(len(dq))
+    print(*dq)

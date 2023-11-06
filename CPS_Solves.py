@@ -81,23 +81,52 @@
 #                 print(-1)
 #         else:
 #             print(-1)
-l = int(input())
-a = int(input())
-p = int(input())
-ct = 0
-f = 1
-total = 0
-maxim = 0
-while(f):
-    ct+=1
-    lemon = 1*ct
-    apple = 2*ct
-    pear = 4*ct
+# l = int(input())
+# a = int(input())
+# p = int(input())
+# ct = 0
+# f = 1
+# total = 0
+# maxim = 0
+# while(f):
+#     ct+=1
+#     lemon = 1*ct
+#     apple = 2*ct
+#     pear = 4*ct
+#
+#     if lemon<=l and apple<=a and pear<=p:
+#         total = lemon+apple+pear
+#         maxim = max(total,maxim)
+#     else:
+#         f = 0
+#
+# print(maxim)
 
-    if lemon<=l and apple<=a and pear<=p:
-        total = lemon+apple+pear
-        maxim = max(total,maxim)
-    else:
-        f = 0
 
-print(maxim)
+import collections
+
+if __name__ == '__main__':
+    n, k = map(int, input().split())
+    ara = list(map(int, input().split()))
+
+    dq = collections.deque()
+    freq = collections.defaultdict()
+
+    for a in ara:
+        if len(dq) == 0:
+            dq.appendleft(a)
+            freq[a] = freq.get(a, 0) + 1
+        else:
+            if a not in freq:
+                if len(dq) >= k:
+                    b = dq.pop()
+                    del freq[b]
+
+                    dq.appendleft(a)
+                    freq[a] = freq.get(a, 0) + 1
+                else:
+                    dq.appendleft(a)
+                    freq[a] = freq.get(a, 0) + 1
+
+    print(len(dq))
+    print(*dq)
