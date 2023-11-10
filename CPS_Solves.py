@@ -102,31 +102,68 @@
 #
 # print(maxim)
 
+#
+# import collections
+#
+# if __name__ == '__main__':
+#     n, k = map(int, input().split())
+#     ara = list(map(int, input().split()))
+#
+#     dq = collections.deque()
+#     freq = collections.defaultdict()
+#
+#     for a in ara:
+#         if len(dq) == 0:
+#             dq.appendleft(a)
+#             freq[a] = freq.get(a, 0) + 1
+#         else:
+#             if a not in freq:
+#                 if len(dq) >= k:
+#                     b = dq.pop()
+#                     del freq[b]
+#
+#                     dq.appendleft(a)
+#                     freq[a] = freq.get(a, 0) + 1
+#                 else:
+#                     dq.appendleft(a)
+#                     freq[a] = freq.get(a, 0) + 1
+#
+#     print(len(dq))
+#     print(*dq)
 
-import collections
+n = int(input())
+li1 = list(map(int, input().split()))
+q = int(input())
+li2 = list(map(int, input().split()))
 
-if __name__ == '__main__':
-    n, k = map(int, input().split())
-    ara = list(map(int, input().split()))
+li1.sort()
+li2.sort()
 
-    dq = collections.deque()
-    freq = collections.defaultdict()
+ct = 0
+prev = -1
+for i in li1:
+    if prev == i:
+        continue
+    else:
+        prev = i
 
-    for a in ara:
-        if len(dq) == 0:
-            dq.appendleft(a)
-            freq[a] = freq.get(a, 0) + 1
+    isPresent = False
+
+    l = 0
+    r = q - 1
+
+    while l <= r:
+        m = int((l + r) / 2)
+
+        if li2[m] == prev:
+            isPresent = True
+            break
+        elif li2[m] > prev:
+            r = m - 1
         else:
-            if a not in freq:
-                if len(dq) >= k:
-                    b = dq.pop()
-                    del freq[b]
+            l = m + 1
 
-                    dq.appendleft(a)
-                    freq[a] = freq.get(a, 0) + 1
-                else:
-                    dq.appendleft(a)
-                    freq[a] = freq.get(a, 0) + 1
+    if isPresent:
+        ct += 1
 
-    print(len(dq))
-    print(*dq)
+print(ct)
