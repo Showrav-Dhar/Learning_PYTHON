@@ -130,40 +130,60 @@
 #
 #     print(len(dq))
 #     print(*dq)
+#
+# n = int(input())
+# li1 = list(map(int, input().split()))
+# q = int(input())
+# li2 = list(map(int, input().split()))
+#
+# li1.sort()
+# li2.sort()
+#
+# ct = 0
+# prev = -1
+# for i in li1:
+#     if prev == i:
+#         continue
+#     else:
+#         prev = i
+#
+#     isPresent = False
+#
+#     l = 0
+#     r = q - 1
+#
+#     while l <= r:
+#         m = int((l + r) / 2)
+#
+#         if li2[m] == prev:
+#             isPresent = True
+#             break
+#         elif li2[m] > prev:
+#             r = m - 1
+#         else:
+#             l = m + 1
+#
+#     if isPresent:
+#         ct += 1
+#
+# print(ct)
 
-n = int(input())
-li1 = list(map(int, input().split()))
-q = int(input())
-li2 = list(map(int, input().split()))
 
-li1.sort()
-li2.sort()
+t = int(input())
+for p in range(t):
+    st = input()
 
-ct = 0
-prev = -1
-for i in li1:
-    if prev == i:
-        continue
+    ans = 1
+    if st[0] == '0':
+        ans = 0
+    elif st[0] != '0' and st[0] != '?':
+        ans = 1
     else:
-        prev = i
+        ans = 9
 
-    isPresent = False
+    n = len(st)
+    for i in range(1, n):
+        if st[i] == '?':
+            ans = ans * 10
 
-    l = 0
-    r = q - 1
-
-    while l <= r:
-        m = int((l + r) / 2)
-
-        if li2[m] == prev:
-            isPresent = True
-            break
-        elif li2[m] > prev:
-            r = m - 1
-        else:
-            l = m + 1
-
-    if isPresent:
-        ct += 1
-
-print(ct)
+    print(ans)
