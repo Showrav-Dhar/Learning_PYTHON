@@ -168,22 +168,52 @@
 #
 # print(ct)
 
+#
+# t = int(input())
+# for p in range(t):
+#     st = input()
+#
+#     ans = 1
+#     if st[0] == '0':
+#         ans = 0
+#     elif st[0] != '0' and st[0] != '?':
+#         ans = 1
+#     else:
+#         ans = 9
+#
+#     n = len(st)
+#     for i in range(1, n):
+#         if st[i] == '?':
+#             ans = ans * 10
+#
+#     print(ans)
+
+
+# https://www.spoj.com/problems/MATHLOVE/en/
+
+def getvalue(n):
+    return n * (n + 1) // 2
+
 
 t = int(input())
-for p in range(t):
-    st = input()
+for test in range(t):
+    a = int(input())
 
-    ans = 1
-    if st[0] == '0':
-        ans = 0
-    elif st[0] != '0' and st[0] != '?':
-        ans = 1
+    l = 1
+    r = a
+    ans = -1
+    while l <= r:
+        mid = (l + r) // 2
+
+        if getvalue(mid) == a:
+            ans = mid
+            break
+        elif getvalue(mid) > a:
+            r = mid - 1
+        else:
+            l = mid + 1
+
+    if ans == -1:
+        print("NAI")
     else:
-        ans = 9
-
-    n = len(st)
-    for i in range(1, n):
-        if st[i] == '?':
-            ans = ans * 10
-
-    print(ans)
+        print(int(ans))
