@@ -191,29 +191,69 @@
 
 # https://www.spoj.com/problems/MATHLOVE/en/
 
-def getvalue(n):
-    return n * (n + 1) // 2
+# def getvalue(n):
+#     return n * (n + 1) // 2
+#
+#
+# t = int(input())
+# for test in range(t):
+#     a = int(input())
+#
+#     l = 1
+#     r = a
+#     ans = -1
+#     while l <= r:
+#         mid = (l + r) // 2
+#
+#         if getvalue(mid) == a:
+#             ans = mid
+#             break
+#         elif getvalue(mid) > a:
+#             r = mid - 1
+#         else:
+#             l = mid + 1
+#
+#     if ans == -1:
+#         print("NAI")
+#     else:
+#         print(int(ans))
 
 
+# https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/monks-encounter-with-polynomial/?purpose=login&source=problem-page&update=google
+
+# t = int(input())
+# for _ in range(t):
+#     a, b, c, k = map(int, input().split())
+#
+#     l = 0
+#     r = 1e5
+#     pos = r + 1
+#
+#     while l <= r:
+#         mid = (l + r) // 2  # integer division
+#         ans = a*(mid * mid) + (b * mid) + c
+#
+#         if ans >= k:
+#             r = mid - 1
+#             pos = min(mid, pos)
+#         else:
+#             l = mid + 1
+#
+#     print(int(pos))
+
+# random cf
 t = int(input())
-for test in range(t):
-    a = int(input())
-
-    l = 1
-    r = a
-    ans = -1
-    while l <= r:
-        mid = (l + r) // 2
-
-        if getvalue(mid) == a:
-            ans = mid
-            break
-        elif getvalue(mid) > a:
-            r = mid - 1
-        else:
-            l = mid + 1
-
-    if ans == -1:
-        print("NAI")
+for _ in range(t):
+    n = int(input())
+    if n == 1:
+        print(1, end= " ")
     else:
-        print(int(ans))
+        if n % 2 != 0:
+            print(-1,end= " ")
+        else:
+            for i in range(1, n + 1):
+                if i % 2 == 1:
+                    print(i+1, end=" ")
+                else:
+                    print(i-1, end=" ")
+    print()
