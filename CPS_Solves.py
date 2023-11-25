@@ -191,29 +191,54 @@
 
 # https://www.spoj.com/problems/MATHLOVE/en/
 
-def getvalue(n):
-    return n * (n + 1) // 2
+# def getvalue(n):
+#     return n * (n + 1) // 2
+#
+#
+# t = int(input())
+# for test in range(t):
+#     a = int(input())
+#
+#     l = 1
+#     r = a
+#     ans = -1
+#     while l <= r:
+#         mid = (l + r) // 2
+#
+#         if getvalue(mid) == a:
+#             ans = mid
+#             break
+#         elif getvalue(mid) > a:
+#             r = mid - 1
+#         else:
+#             l = mid + 1
+#
+#     if ans == -1:
+#         print("NAI")
+#     else:
+#         print(int(ans))
 
+
+# https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/monks-encounter-with-polynomial/?purpose=login&source=problem-page&update=google
 
 t = int(input())
-for test in range(t):
-    a = int(input())
+for _ in range(t):
+    a, b, c, k = map(int, input().split())
 
-    l = 1
-    r = a
-    ans = -1
+    l = 0
+    r = 1e5
+    pos = r + 1
+
     while l <= r:
-        mid = (l + r) // 2
+        mid = (l + r) // 2  # integer division
+        ans = a*(mid * mid) + (b * mid) + c
 
-        if getvalue(mid) == a:
-            ans = mid
-            break
-        elif getvalue(mid) > a:
+        if ans >= k:
             r = mid - 1
+            pos = min(mid, pos)
         else:
             l = mid + 1
 
-    if ans == -1:
-        print("NAI")
-    else:
-        print(int(ans))
+    print(int(pos))
+
+
