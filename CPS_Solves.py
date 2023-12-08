@@ -242,18 +242,83 @@
 #     print(int(pos))
 
 # random cf
-t = int(input())
-for _ in range(t):
-    n = int(input())
-    if n == 1:
-        print(1, end= " ")
-    else:
-        if n % 2 != 0:
-            print(-1,end= " ")
-        else:
-            for i in range(1, n + 1):
-                if i % 2 == 1:
-                    print(i+1, end=" ")
-                else:
-                    print(i-1, end=" ")
-    print()
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     if n == 1:
+#         print(1, end= " ")
+#     else:
+#         if n % 2 != 0:
+#             print(-1,end= " ")
+#         else:
+#             for i in range(1, n + 1):
+#                 if i % 2 == 1:
+#                     print(i+1, end=" ")
+#                 else:
+#                     print(i-1, end=" ")
+#     print()
+
+
+# https://www.spoj.com/problems/RPLC/
+
+#
+# if __name__ == '__main__':
+#     t = int(input())
+#     for T in range(1, t + 1):
+#         n = int(input())
+#         li = list(map(int, input().split()))
+#
+#         l = 1
+#         r = 1e14
+#         ans = r
+#
+#         while l <= r:
+#             mid = (l + r) // 2
+#
+#             val = mid
+#             dis = 1;
+#             for i in range(n):
+#                 val += li[i]
+#                 if val <= 0:
+#                     dis = 0
+#                     break
+#
+#             if dis == 1:
+#                 ans = min(ans, mid)
+#                 r = mid - 1;
+#             else:
+#                 l = mid + 1
+#         print("Scenario #" + str(T) + ": " + str(int(ans)))
+
+
+# https://www.spoj.com/problems/SABBIRGAME/
+
+if __name__ == '__main__':
+    t = int(input())
+    for test in range(t):
+        n = int(input())
+        li = list(map(int, input().split()))
+
+        l = 0
+        r = 1e11
+        ans = r
+
+        while l <= r:
+            mid = (l + r) // 2
+
+            val = mid
+            dis = 1
+
+            for i in range(n):
+                val += li[i]
+                if val <= 0:
+                    dis = 0
+                    break
+
+            if dis == 1:
+                ans = min(ans, mid)
+                r = mid - 1
+            else:
+                l = mid + 1
+
+        print(int(ans))
