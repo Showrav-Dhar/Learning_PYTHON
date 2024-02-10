@@ -292,33 +292,73 @@
 
 
 # https://www.spoj.com/problems/SABBIRGAME/
+#
+# if __name__ == '__main__':
+#     t = int(input())
+#     for test in range(t):
+#         n = int(input())
+#         li = list(map(int, input().split()))
+#
+#         l = 0
+#         r = 1e11
+#         ans = r
+#
+#         while l <= r:
+#             mid = (l + r) // 2
+#
+#             val = mid
+#             dis = 1
+#
+#             for i in range(n):
+#                 val += li[i]
+#                 if val <= 0:
+#                     dis = 0
+#                     break
+#
+#             if dis == 1:
+#                 ans = min(ans, mid)
+#                 r = mid - 1
+#             else:
+#                 l = mid + 1
+#
+#         print(int(ans))
+#
+# import sys
+#
+# def main():
+#     TC = int(input())
+#     for _ in range(TC):
+#         n, k, x = map(int, input().split())
+#         if k > min(n, x+1):
+#             print(-1)
+#         else:
+#             sum = 0
+#             for i in range(k):
+#                 sum += i
+#                 n -= 1
+#             if k == x:
+#                 for i in range(n):
+#                     sum += (x-1)
+#             else:
+#                 for i in range(n):
+#                     sum += x
+#             print(sum)
+#
+# if __name__ == "__main__":
+#     main()
+#
+#
 
-if __name__ == '__main__':
-    t = int(input())
-    for test in range(t):
-        n = int(input())
-        li = list(map(int, input().split()))
-
-        l = 0
-        r = 1e11
-        ans = r
-
-        while l <= r:
-            mid = (l + r) // 2
-
-            val = mid
-            dis = 1
-
-            for i in range(n):
-                val += li[i]
-                if val <= 0:
-                    dis = 0
-                    break
-
-            if dis == 1:
-                ans = min(ans, mid)
-                r = mid - 1
-            else:
-                l = mid + 1
-
-        print(int(ans))
+# Number theory
+# harmonic series
+# if __name__ == '__main__':
+#     mx = int(1e7)+123
+#     ara = [0]*mx
+#
+#     lim = 10
+#     for i in range(1,lim+1):
+#         for j in range(i,lim+1,i):
+#             ara[j]+=1
+#
+#
+#     print(ara[5])

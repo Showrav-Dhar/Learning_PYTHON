@@ -363,8 +363,23 @@
 #         break
 #
 # print(ans)
-
-
-
-
-
+#
+# t = int(input())
+# for p in range(0,t):
+#     n, k, x = map(int, input().split())
+#     if k > min(n, x + 1):
+#         print(-1)
+#     else:
+#         sum = 0
+#         for i in range(0, k):
+#             sum += i
+#             n = n - 1;
+#
+#         if k == x:
+#             for i in range(0,n):
+#                 sum += (x - 1)
+#         else:
+#             for i in range(0,n):
+#                 sum += x
+#
+#         print(sum)
