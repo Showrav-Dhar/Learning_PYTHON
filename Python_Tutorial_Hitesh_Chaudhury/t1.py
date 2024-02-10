@@ -60,3 +60,51 @@
 # Python3 Program to print BFS traversal
 # from a given source vertex. BFS(int s)
 # traverses vertices reachable from s.
+
+class Graph:
+    def __init__(self, num_nodes, edges):
+        self.num_nodes = num_nodes
+        self.data = [[] for _ in range(num_nodes)]
+        for a, b in edges:
+            self.data[a].append(b)
+            self.data[b].append(a)
+
+    # def __repr__(self):
+    #     return "\n".join(["{}: {}".format(node, neigbours) for node, neigbours in
+    #                       enumerate(self.data)])  # it gives value and indices of the list
+    #
+    # def __str__(self):
+    #     return self.__repr__()
+
+    def add_edge(self, start, end):
+        if start < 0 or start >= self.num_nodes or end < 0 or end >= self.num_nodes:
+            print("Value error")
+        else:
+            self.data[start].append(end)
+            self.data[end].append(start)
+
+    def bfs(self, root):
+        queue = []
+        visited = [False] * len(self.data)
+
+        visited[root] = True
+        queue.append(root)
+        idx = 0
+
+        while idx < len(queue):
+            current = queue[idx]
+            idx += 1
+
+            for node in self.data[current]:
+                if not visited[node]:
+                    visited[node] = True
+                    queue.append(node)
+
+        return queue
+
+
+if __name__ == '__main__':
+    num_nodes = 5
+    edges = [(0, 1), (0, 4), (1, 2), (1, 3), (2, 3), (1, 4), (3, 4)]
+    graph1 = Graph(num_nodes, edges)
+    print(graph1.bfs(3))

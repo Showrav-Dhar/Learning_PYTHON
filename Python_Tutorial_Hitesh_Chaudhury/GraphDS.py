@@ -81,14 +81,14 @@ if __name__ == '__main__':
     #     print(graph1)
 
     # Breadth-First-Search
-    # implement breadth-first search given a source node in a graph using Python.
+    # question 3 - implement breadth-first search given a source node in a graph using Python.
     root_node = 1
-    Que, Dis, parent = graph1.BFS(root_node)
-    print("Traversing")
+    Que, Dis, parents = graph1.BFS(root_node)
+    print("Traversing order")
     print(Que)
     print(f"Distance From rootNode - {root_node}")
     print(Dis)
     print(f"Parents of each node with respect to {root_node}")
-    print(parent)
+    print(parents)
 
-# Question - Write a program to check if all the nodes in a graph are connected
+    # question 4 - Write a program to check if all the nodes in a graph are connected
