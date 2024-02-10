@@ -46,7 +46,7 @@ class Graph:
 
             # check all edges of the current
 
-            for node in self.data[current]:
+            for node in self.data[current]:  # checking the adjacency list
                 if not discovered[node]:  # means discovered[node] = False
                     distance[node] = 1 + distance[current]
                     parent[node] = current
@@ -54,6 +54,40 @@ class Graph:
                     queue.append(node)
 
         return queue, distance, parent
+
+    def dfs_iterative(self, root):  # iterative
+        stack = []
+        discovered = [False] * len(self.data)
+        result = []
+
+        stack.append(root)
+
+        while len(stack) > 0:
+            current = stack.pop()  # return the top value
+            if not discovered[current]:
+                # if current not is not discovered yet then apply the following operations
+                discovered[current] = True
+                result.append(current)
+
+                for node in self.data[current]:  # checking the adjacency list
+                    if not discovered[node]:
+                        stack.append(node)
+
+        return result
+
+    def dfs_recursive(self, root, visited=None):
+
+        if visited is None:
+            visited = set()  # python set is unordered, visited: A set to keep track of visited nodes (default: None).
+
+        visited.add(root)
+        result = [root]
+
+        for neighbour in self.data[root]:
+            if neighbour not in visited:
+                result += self.dfs_recursive(neighbour, visited)
+
+        return result
 
 
 if __name__ == '__main__':
@@ -82,13 +116,17 @@ if __name__ == '__main__':
 
     # Breadth-First-Search
     # question 3 - implement breadth-first search given a source node in a graph using Python.
-    root_node = 1
-    Que, Dis, parents = graph1.BFS(root_node)
-    print("Traversing order")
-    print(Que)
-    print(f"Distance From rootNode - {root_node}")
-    print(Dis)
-    print(f"Parents of each node with respect to {root_node}")
-    print(parents)
+    # root_node = 1
+    # Que, Dis, parents = graph1.BFS(root_node)
+    # print("Traversing order")
+    # print(Que)
+    # print(f"Distance From rootNode - {root_node}")
+    # print(Dis)
+    # print(f"Parents of each node with respect to {root_node}")
+    # print(parents)
 
-    # question 4 - Write a program to check if all the nodes in a graph are connected
+    # question 4 - Write a program to implement Depth-First Search given a source node in a graph using Python.
+    root_node = 0
+    print(graph1.dfs_iterative(root_node))
+    print("Recursive")
+    print(graph1.dfs_recursive(root_node))
