@@ -5,6 +5,7 @@ def solveNQueen(n):
 
     res = []
     board = [['.'] * n for i in range(n)]  # N x N chess board
+
     # board = N number of strings which length is also N
 
     def backTrack(r):
@@ -31,6 +32,7 @@ def solveNQueen(n):
                 negDiag.remove(r - c)
                 board[r][c] = '.'
 
+    # starting of the process
     backTrack(0)
     return res
 
@@ -41,7 +43,7 @@ if __name__ == '__main__':
     result = solveNQueen(n)
     print(f"For {n} Queens , solutions are ")
     for i in range(len(result)):
-        print(f"Solution {i+1} - ")
+        print(f"Solution {i + 1} - ")
         for j in range(len(result[i])):
             print(result[i][j], end='')
             print()
