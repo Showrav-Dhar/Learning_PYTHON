@@ -21,16 +21,15 @@ class priorityQueue:
         print(self.cities)
 
 
+# takes the heuristics dictionary, returns the straight line distance from a node to bucharest
 def heuristic(node, values):
     return values[node]
 
 
-# takes the heuristics dictionary, returns the straight line distance from a node to bucharest
-
 def astar(start, end, romania, heuristics):
     path = {}  # keeps track of parent of each city
     distance = {}  # keeps track of distance from Arad to each city
-    q = priorityQueue()
+    q = priorityQueue()  # to store the f(n) values and city2
     h = heuristics  # copy of heuristics dictionary
 
     q.push(start, 0)
@@ -102,7 +101,7 @@ if __name__ == "__main__":
         "Urziceni": 80, "Vaslui": 199, "Zerind": 374,
     }
 
-    src = "Arad"
-    dst = "Bucharest"
+    start = "Arad"
+    end = "Bucharest"
     print("\nAfter applying A* algorithm from Arad To Bucharest - \n")
-    astar(src, dst, RomaniaMap, HeuristicValues)
+    astar(start, end, RomaniaMap, HeuristicValues)
