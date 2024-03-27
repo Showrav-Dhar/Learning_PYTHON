@@ -3,6 +3,8 @@
 # maximizing player can get
 import math
 
+#   video for visualization - https://youtu.be/l-hh51ncgDI?si=cWhkfwjal4RrAKYO
+
 
 # maxTurn = false means mini
 # maxTurn = True means max
