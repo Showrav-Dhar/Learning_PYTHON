@@ -80,16 +80,14 @@ def astar(start, end):
     q.push(start, 0)
     distance[start] = 0
     path[start] = None
-    expandedList = []
 
     while (q.isEmpty() == False):
         current = q.pop()
-        expandedList.append(current)
 
         if (current == end):
             break
 
-        for new_city, new_distance in romania[current]:  # Access city and distance from tuple
+        for new_city, new_distance in romania[current]:
             g_cost = distance[current] + new_distance
 
             if new_city not in distance or g_cost < distance[new_city]:
@@ -98,43 +96,25 @@ def astar(start, end):
                 q.push(new_city, f_cost)
                 path[new_city] = current
 
-    # printoutput(start, end, path, distance, expandedList)
-    finalpath = []
+    printoutput(start, end, path, distance)
+
+def printoutput(start, end, path, distance):
+    route = []
     i = end
 
     while (path.get(i) != None):
-        finalpath.append(i)
+        route.append(i)
         i = path[i]
-    finalpath.append(start)
-    finalpath.reverse()
-    print("Cities passed with the shortest distance\t: " + str(finalpath))
-    print("Number of cities passed through \t\t\t: " + str(len(finalpath)))
-    print("Total distance \t\t\t\t\t\t: " + str(distance[end]))
+    route.append(start)
+    route.reverse()
 
-# def printoutput(start, end, path, distance, expandedlist):
-#     finalpath = []
-#     i = end
-#
-#     while (path.get(i) != None):
-#         finalpath.append(i)
-#         i = path[i]
-#     finalpath.append(start)
-#     finalpath.reverse()
-#
-#     print("From Arad To Bucharest")
-#     print("=======================================================")
-#     print("Cities that might be explored \t\t: " + str(expandedlist))
-#     print("Number of cities passed through \t\t: " + str(len(expandedlist)))
-#     print("=======================================================")
-#     print("Cities passed with the shortest distance\t: " + str(finalpath))
-#     print("Number of cities passed through \t\t\t: " + str(len(finalpath)))
-#     print("Total distance \t\t\t\t\t\t: " + str(distance[end]))
+    print("Route - : " + str(route))
+    print("Total distance : " + str(distance[end]))
 
 
 if __name__ == "__main__":
     src = "Arad"
     dst = "Bucharest"
-    print("After applying A* algorithm from Arad To Bucharest - ")
+    print(f"Shortest path from {src} to {dst}")
     astar(src, dst)
 
-    # modify for university

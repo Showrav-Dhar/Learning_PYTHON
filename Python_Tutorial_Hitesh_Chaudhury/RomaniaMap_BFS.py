@@ -66,11 +66,8 @@ def GreedyBFS(StartingNode, DestinationNode):
         # so when g = arad , it will be None , because arad has no parent
         # then the loop will stop
 
-    # path.reverse()  # to show the path from start ot end
-    # print(path)
-    # for key, value in visited.items():
-    #     print(f"{key} : - {value}")
-    print(BFS_result)
+    path.reverse()  # to show the path from start ot end
+    print(path)
 
 
 if __name__ == '__main__':

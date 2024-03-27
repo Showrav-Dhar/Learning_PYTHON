@@ -384,3 +384,18 @@
 #
 #         print(sum)
 
+t = int(input())
+for tc in range(t):
+    n = int(input())
+    st = input()
+    st1 = "map"
+    st2 = "pie"
+    ct1 = st.count(st1)
+    ct2 = st.count(st2)
+    # print(ct1,ct2)
+    p_assumed = (ct1 + ct2)
+    p_have = st.count('p')
+    if ct1 != 0 or ct2 != 0:
+        print((p_assumed-p_have))
+    else:
+        print(0)
