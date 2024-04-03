@@ -1,99 +1,74 @@
-# from queue import Queue
+# def truth_table(p, q):
+#     """
+#   This function generates a truth table for p, q, ~p, p ∨ q, p ∧ q, p → q, and p ↔ q.
+#
+#   Args:
+#       p: The first proposition (boolean)
+#       q: The second proposition (boolean)
+#
+#   Returns:
+#       A list of lists representing the truth table.
+#   """
+#     # Define all propositions and their negations
+#     props = {"p": p, "q": q, "~p": not p, "~q": not q}
+#
+#     # Evaluate compound propositions using truth rules
+#     props["p ∨ q"] = props["p"] or props["q"]
+#     props["p ∧ q"] = props["p"] and props["q"]
+#     props["p → q"] = not props["p"] or props["q"]  # Implication rule
+#     props["p ↔ q"] = (props["p"] and props["q"]) or (not props["p"] and not props["q"])  # Bi-conditional rule
+#
+#     # Create table header
+#     table = [["p", "q", "~p", "p ∨ q", "p ∧ q", "p → q", "p ↔ q"]]
+#
+#     # Add each row with formatted values (all truth combinations)
+#     table.extend([[str(value) for value in props.values()]] for _ in range(4))
+#
+#     return table
 #
 #
-# def GreedyBFS(romaniaMap, StartingNode, DestinationNode):
-#     visited = {}    # for keeping track of the visited nodes,
-#     distance = {}   # keeping track of the level from root node
-#     parent = {}     # keeping track of the parents of a node
+# # Example usage
+# props_table = truth_table(True, False)
 #
-#     BFS_result = []     # result of level order traversal
-#     queue = Queue()     # to maintain level order traversal
-#
-#     for city in romaniaMap.keys():
-#         visited[city] = False   # initially making every city unvisited
-#         distance[city] = -1     # initially making every city level = -1
-#         parent[city] = None     # initially making every city with no parent
-#
-#     StartingCity = StartingNode
-#     visited[StartingCity] = True    # Marked the starting city visited
-#     distance[StartingCity] = 0      # root node level = 0
-#     queue.put(StartingCity)         # start of bfs queue
-#
-#     while not queue.empty():
-#         CurrentCity = queue.get()     # taking out the first item of the queue
-#         BFS_result.append(CurrentCity)
-#
-#         # visiting adjacent nodes of CurrentCity
-#         for Neighbour in romaniaMap[CurrentCity]:
-#             if not visited[Neighbour]:
-#                 visited[Neighbour] = True
-#                 parent[Neighbour] = CurrentCity
-#                 distance[Neighbour] = distance[CurrentCity] + 1
-#                 queue.put(Neighbour)
-#
-#     g = DestinationNode
-#     finalResult = []
-#     while g is not None:    # g will be None for the starting city
-#         finalResult.append(g)   # going backwards
-#         g = parent[g]
-#
-#     finalResult.reverse()
-#     print(finalResult)
-#
-#
-# if __name__ == '__main__':
-#     RomaniaMap = {
-#         'Arad': ['Sibiu', 'Zerind', 'Timisoara'],
-#         'Zerind': ['Arad', 'Oradea'],
-#         'Oradea': ['Zerind', 'Sibiu'],
-#         'Sibiu': ['Arad', 'Oradea', 'Fagaras', 'Rimnicu'],
-#         'Timisoara': ['Arad', 'Lugoj'],
-#         'Lugoj': ['Timisoara', 'Mehadia'],
-#         'Mehadia': ['Lugoj', 'Drobeta'],
-#         'Drobeta': ['Mehadia', 'Craiova'],
-#         'Craiova': ['Drobeta', 'Rimnicu', 'Pitesti'],
-#         'Rimnicu': ['Sibiu', 'Craiova', 'Pitesti'],
-#         'Fagaras': ['Sibiu', 'Bucharest'],
-#         'Pitesti': ['Rimnicu', 'Craiova', 'Bucharest'],
-#         'Bucharest': ['Fagaras', 'Pitesti', 'Giurgiu', 'Urziceni'],
-#         'Giurgiu': ['Bucharest'],
-#         'Urziceni': ['Bucharest', 'Vaslui', 'Hirsova'],
-#         'Hirsova': ['Urziceni', 'Eforie'],
-#         'Eforie': ['Hirsova'],
-#         'Vaslui': ['Iasi', 'Urziceni'],
-#         'Iasi': ['Vaslui', 'Neamt'],
-#         'Neamt': ['Iasi']
-#     }
-#     StartNode = 'Arad'
-#     EndNode = 'Bucharest'
-#     print(f"After Applying BFS on Romania Map , Path from {StartNode} to {EndNode} - ")
-#     GreedyBFS(RomaniaMap, StartNode, EndNode)
+# # Print the truth table
+# for row in props_table:
+#     print(row)
 
-import math
+def truth_table(p, q):
+    """
+    This function generates a truth table for p, q, ~p, ~q, p ∨ q, p ∧ q, p → q, and p ↔ q.
+
+    Args:
+        p: The first proposition (boolean)
+        q: The second proposition (boolean)
+
+    Returns:
+        A list of lists representing the truth table.
+    """
+    # Define all propositions and their negations
+    props = {"p": p, "q": q, "~p": not p, "~q": not q}
+
+    # Evaluate compound propositions using truth rules
+    props["p ∨ q"] = props["p"] or props["q"]
+    props["p ∧ q"] = props["p"] and props["q"]
+    props["p → q"] = not props["p"] or props["q"]  # Implication rule
+    props["p ↔ q"] = (props["p"] and props["q"]) or (not props["p"] and not props["q"])  # Bi-conditional rule
+
+    # Create table header
+    table = [["p", "q", "~p", "~q", "p ∨ q", "p ∧ q", "p → q", "p ↔ q"]]
+
+    # Generate all truth combinations
+    all_truth_values = [(True, True), (True, False), (False, True), (False, False)]
+
+    # Evaluate truth values for each combination and add to table
+    for p_val, q_val in all_truth_values:
+        props.update({"p": p_val, "q": q_val})  # Update propositions for each combination
+        table.append([str(value) for value in props.values()])
+
+    return table
 
 
-# lc = left child
-# rc = right child
-def minimax(curDepth, nodeIndex, maxTurn, scores, targetDepth):
-    if curDepth == targetDepth:
-        return scores[nodeIndex]
-
-    if maxTurn:
-        lc = minimax(curDepth + 1, nodeIndex * 2, False, scores, targetDepth)
-        rc = minimax(curDepth + 1, nodeIndex * 2 + 1, False, scores, targetDepth)
-        return max(lc, rc)
-    else:
-        lc = minimax(curDepth + 1, nodeIndex * 2, True, scores, targetDepth)
-        rc = minimax(curDepth + 1, nodeIndex * 2 + 1, True, scores, targetDepth)
-        return min(lc, rc)
-
-
-if __name__ == '__main__':
-    # scores = [3, 5, 2, 9, 12, 5, 23, 23]
-    scores = [-1, 8, -3, -1, 2, 1, -3, 4]
-
-    treeDepth = math.log(len(scores), 2)
-
-    print("The optimal value is : ", end="")
-    print(minimax(0, 0, True, scores, treeDepth))
-    # minimax(curDepth, nodeIndex, maxTurn, scores, targetDepth)
+# Print the truth table
+# print("[  'p',    'q',    '~p',    '~q',   'p ∨ q', 'p ∧ q', 'p → q', 'p ↔ q']")
+props_table = truth_table(True, True)
+print(*props_table, sep='\n')  # Unpack and print all rows (including header)

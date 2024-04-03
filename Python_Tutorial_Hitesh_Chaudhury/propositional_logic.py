@@ -1,15 +1,18 @@
 def truth_table(p, q):
+    # Define all propositions and their negations
     props = {"p": p, "q": q, "~p": not p, "~q": not q}  # dictionary
 
+    # Evaluate compound propositions using truth rules
     props["p ∨ q"] = props["p"] or props["q"]
     props["p ∧ q"] = props["p"] and props["q"]
     props["p → q"] = not props["p"] or props["q"]  # Implication rule
     props["p ↔ q"] = (props["p"] and props["q"]) or (not props["p"] and not props["q"])  # Bi-conditional rule
 
-    table = [[]]  # list of list
+    # Created table header
+    table = [[]]
 
-    # Add each row with formatted values
     table.extend([[str(value) for value in props.values()]] for _ in range(1))
+    # added the result in the table
 
     return table
 
@@ -17,17 +20,13 @@ def truth_table(p, q):
 # application
 print("[  'p',    'q',    '~p',    '~q',   'p ∨ q', 'p ∧ q', 'p → q', 'p ↔ q']")
 props_table = truth_table(True, True)
-for row in range(1,len(props_table)):
-    print(props_table[row])
+print(props_table[1])
 
 props_table = truth_table(True, False)
-for row in range(1,len(props_table)):
-    print(props_table[row])
+print(props_table[1])
 
 props_table = truth_table(False, True)
-for row in range(1,len(props_table)):
-    print(props_table[row])
+print(props_table[1])
 
 props_table = truth_table(False, False)
-for row in range(1,len(props_table)):
-    print(props_table[row])
+print(props_table[1])
